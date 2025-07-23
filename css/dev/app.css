@@ -322,7 +322,7 @@ input[type="number"] {
   margin-bottom: 1.25rem;
 }
 .item-product__price {
-  color: #111;
+  color: var(--text-color);
   font-size: 2rem;
   text-transform: uppercase;
 }
