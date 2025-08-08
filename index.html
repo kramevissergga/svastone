@@ -6,8 +6,8 @@
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Головна</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1754352686234"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1754352686234">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1754618475161"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1754618475161">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -263,7 +263,68 @@
 					<div data-fls-popup-body="" class="popup__body">
 						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
 						<div class="auth-popup">
-							<div class="auth-popup__aside">tghyththt</div>
+							<div class="auth-popup__aside"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="review-popup" aria-hidden="true" class="popup popup--review">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
+						<div class="review-popup">
+							<h3 class="review-popup__title">Написати відгук</h3>
+							<form action="#" method="POST" enctype="multipart/form-data" class="review-popup__form">
+								<div class="review-popup__label">Оцініть товар</div>
+								<div class="review-popup__rating">
+									<label class="review-popup__rating-item _icon-star">
+										<input type="radio" name="rating">
+										Погано
+									</label>
+									<label class="review-popup__rating-item _icon-star">
+										<input type="radio" name="rating">
+										Не дуже
+									</label>
+									<label class="review-popup__rating-item _icon-star">
+										<input type="radio" name="rating">
+										Нормально
+									</label>
+									<label class="review-popup__rating-item _icon-star">
+										<input type="radio" name="rating">
+										Добре
+									</label>
+								</div>
+								<div class="review-popup__bg-label bg-label">
+									<b>Завершіть ваш відгук</b>
+									та отримайте
+									<b>150₴</b>
+									бонусами на наступне замовлення
+								</div>
+								<div class="review-popup__field field">
+									<div class="field__label">
+										Email
+										<span>*обов’язково для отримання бонуса</span>
+									</div>
+									<input type="email" name="email" placeholder="Ваш email" class="field__input">
+								</div>
+								<div class="review-popup__field field">
+									<div class="field__label">Ім’я та прізвище</div>
+									<input type="text" name="name" placeholder="Андрій Хартов" class="field__input">
+								</div>
+								<div class="review-popup__field field">
+									<div class="field__label">Телефон</div>
+									<input type="text" name="phone" placeholder="0 9X XXX XX XX" class="field__input">
+								</div>
+								<div class="review-popup__field field">
+									<div class="field__label">Коментар</div>
+									<textarea name="comment" class="field__textarea"></textarea>
+								</div>
+								<label class="review-popup__checkbox checkbox">
+									Я погоджуюсь на обробку персональних даних
+									<input type="checkbox">
+								</label>
+								<div class="review-popup__button button button--border">НАПИСАТИ ВІДГУК</div>
+							</form>
 						</div>
 					</div>
 				</div>

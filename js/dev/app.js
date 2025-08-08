@@ -2901,6 +2901,27 @@ document.addEventListener("DOMContentLoaded", function() {
     sliderEl.splide = productsSlider;
     productsSlider.mount();
   });
+  var bundleSliderEls = document.querySelectorAll(".bundle-products__slider");
+  if (bundleSliderEls) {
+    bundleSliderEls.forEach(function(sliderEl) {
+      var bundleSlider = new Splide(sliderEl, {
+        perPage: 2,
+        arrows: false,
+        pagination: true,
+        perMove: 1,
+        gap: 20,
+        updateOnMove: true,
+        destroy: true,
+        breakpoints: {
+          991.98: {
+            destroy: false
+          }
+        }
+      });
+      sliderEl.splide = bundleSlider;
+      bundleSlider.mount();
+    });
+  }
   var newsSliderEls = document.querySelectorAll(".news-section__slider");
   newsSliderEls.forEach(function(sliderEl) {
     var newsSlider = new Splide(sliderEl, {
@@ -2943,7 +2964,7 @@ document.addEventListener("DOMContentLoaded", function() {
       perPage: 6,
       gap: 10,
       direction: "ttb",
-      heightRatio: 7.14,
+      heightRatio: 7.16,
       pagination: false,
       arrows: true,
       breakpoints: {
@@ -3506,6 +3527,18 @@ document.querySelector("[data-fls-rating]") ? window.addEventListener("load", fo
 document.addEventListener("click", function(e) {
   e.target.closest("[data-theme-toggle]") ? document.documentElement.classList.toggle("--dark") : null;
 });
+const headerEl = document.querySelector("header.header");
+function updateHeaderHeights() {
+  if (headerEl) {
+    headerEl.style.transition = "none";
+    const headerHeight = headerEl.offsetHeight;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
+    headerEl.style.transition = "";
+  }
+}
 function centerEls() {
   setTimeout(() => {
     const containers = document.querySelectorAll("[data-center-parent]");
@@ -3524,8 +3557,14 @@ function centerEls() {
     });
   }, 300);
 }
-document.addEventListener("DOMContentLoaded", centerEls);
-window.addEventListener("resize", centerEls);
+document.addEventListener("DOMContentLoaded", () => {
+  updateHeaderHeights();
+  centerEls();
+});
+window.addEventListener("resize", () => {
+  updateHeaderHeights();
+  centerEls();
+});
 function tabs() {
   const tabs2 = document.querySelectorAll("[data-fls-tabs]");
   let tabsActiveHash = [];

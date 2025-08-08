@@ -6,8 +6,8 @@
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Товар</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1754352686234"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1754352686234">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1754618475161"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1754618475161">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -263,7 +263,68 @@
 					<div data-fls-popup-body="" class="popup__body">
 						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
 						<div class="auth-popup">
-							<div class="auth-popup__aside">tghyththt</div>
+							<div class="auth-popup__aside"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="review-popup" aria-hidden="true" class="popup popup--review">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
+						<div class="review-popup">
+							<h3 class="review-popup__title">Написати відгук</h3>
+							<form action="#" method="POST" enctype="multipart/form-data" class="review-popup__form">
+								<div class="review-popup__label">Оцініть товар</div>
+								<div class="review-popup__rating">
+									<label class="review-popup__rating-item _icon-star">
+										<input type="radio" name="rating">
+										Погано
+									</label>
+									<label class="review-popup__rating-item _icon-star">
+										<input type="radio" name="rating">
+										Не дуже
+									</label>
+									<label class="review-popup__rating-item _icon-star">
+										<input type="radio" name="rating">
+										Нормально
+									</label>
+									<label class="review-popup__rating-item _icon-star">
+										<input type="radio" name="rating">
+										Добре
+									</label>
+								</div>
+								<div class="review-popup__bg-label bg-label">
+									<b>Завершіть ваш відгук</b>
+									та отримайте
+									<b>150₴</b>
+									бонусами на наступне замовлення
+								</div>
+								<div class="review-popup__field field">
+									<div class="field__label">
+										Email
+										<span>*обов’язково для отримання бонуса</span>
+									</div>
+									<input type="email" name="email" placeholder="Ваш email" class="field__input">
+								</div>
+								<div class="review-popup__field field">
+									<div class="field__label">Ім’я та прізвище</div>
+									<input type="text" name="name" placeholder="Андрій Хартов" class="field__input">
+								</div>
+								<div class="review-popup__field field">
+									<div class="field__label">Телефон</div>
+									<input type="text" name="phone" placeholder="0 9X XXX XX XX" class="field__input">
+								</div>
+								<div class="review-popup__field field">
+									<div class="field__label">Коментар</div>
+									<textarea name="comment" class="field__textarea"></textarea>
+								</div>
+								<label class="review-popup__checkbox checkbox">
+									Я погоджуюсь на обробку персональних даних
+									<input type="checkbox">
+								</label>
+								<div class="review-popup__button button button--border">НАПИСАТИ ВІДГУК</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -451,6 +512,36 @@
 									<button class="hero-product__icon-btn icon-btn _icon-heart"></button>
 									<button class="hero-product__icon-btn icon-btn _icon-diff"></button>
 								</div>
+								<!--
+<div class="hero-product__actions hero-product__actions--not-av">
+<div class="hero-product__counter">
+<span>Кількість:</span>
+<div class="counter">
+<button class="counter__btn counter__btn--decrement icon-btn">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewBox="0 0 16 2" fill="none">
+<path d="M0 2V0H16V2H0Z" fill="var(--color, #FFF)" />
+</svg>
+</button>
+<input value="1" type="number" class="counter__input">
+<button class="counter__btn counter__btn--increment icon-btn">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M6.97179 16V8.82759H0V6.98851H6.97179V0H9.02821V6.98851H16V8.82759H9.02821V16H6.97179Z"
+fill="var(--color, #FFF)" />
+</svg>
+</button>
+</div>
+</div>
+<div class="hero-product__notif">
+<label class="hero-product__notif-checkbox checkbox">
+<input type="checkbox">
+Сповістити мене, коли товар буде в наявності
+</label>
+<div class="hero-product__notif-field field">
+<input type="email" name="email" placeholder="Ваш email" class="field__input">
+</div>
+</div>
+</div>
+-->
 								<div class="hero-product__details">
 									<div class="hero-product__det-item _icon-box">
 										<div class="hero-product__det-body">
@@ -886,6 +977,191 @@
 							</div>
 						</div>
 					</section>
+					<section class="product__reviews reviews-product">
+						<div class="reviews-product__container">
+							<div class="reviews-product__aside">
+								<div class="reviews-product__title section-title">
+									<span>reviews</span>
+									<h2>
+										відгуки
+										<span class="small">(3)</span>
+									</h2>
+								</div>
+								<div class="reviews-product__stats stats-rev-pr">
+									<div class="stats-rev-pr__label _icon-star">
+										<div>
+											Оцінка користувачів:
+											<b>5</b>
+											/
+											<span>5</span>
+										</div>
+									</div>
+									<div class="stats-rev-pr__info-label">
+										<span>на основі</span>
+										3 відгуків
+									</div>
+									<div class="stats-rev-pr__body">
+										<div class="stats-rev-pr__item">
+											<div class="stats-rev-pr__rating _icon-star">5</div>
+											<div style="--fill: 100%" class="stats-rev-pr__line"></div>
+											<div class="stats-rev-pr__count">3</div>
+										</div>
+										<div class="stats-rev-pr__item">
+											<div class="stats-rev-pr__rating _icon-star">4</div>
+											<div style="--fill: 0" class="stats-rev-pr__line"></div>
+											<div class="stats-rev-pr__count">0</div>
+										</div>
+										<div class="stats-rev-pr__item">
+											<div class="stats-rev-pr__rating _icon-star">3</div>
+											<div style="--fill: 0" class="stats-rev-pr__line"></div>
+											<div class="stats-rev-pr__count">0</div>
+										</div>
+										<div class="stats-rev-pr__item">
+											<div class="stats-rev-pr__rating _icon-star">2</div>
+											<div style="--fill: 0" class="stats-rev-pr__line"></div>
+											<div class="stats-rev-pr__count">0</div>
+										</div>
+										<div class="stats-rev-pr__item">
+											<div class="stats-rev-pr__rating _icon-star">1</div>
+											<div style="--fill: 0" class="stats-rev-pr__line"></div>
+											<div class="stats-rev-pr__count">0</div>
+										</div>
+									</div>
+									<div class="stats-rev-pr__bg-label bg-label">
+										<b>Залиште відгук</b>
+										та отримайте
+										<b>150₴</b>
+										бонусами на наступне замовлення
+									</div>
+									<button data-fls-popup-link="review-popup" class="stats-rev-pr__button button button--border">НАПИСАТИ
+              ВІДГУК</button>
+								</div>
+							</div>
+							<div class="reviews-product__body">
+								<div class="reviews-product__item">
+									<div class="reviews-product__header">
+										<h4 class="reviews-product__name">Віталій Т.</h4>
+										<div class="reviews-product__date">22 червня 2025</div>
+									</div>
+									<div class="reviews-product__rating">
+										<div data-fls-rating="" data-fls-rating-value="5" class="rating"></div>
+									</div>
+									<p class="reviews-product__text">
+										Дуже гарна якість товару! Крутий принт, кольори насичені, малюнок чіткий. Доставка швидка, все прийшло
+              вчасно і в ідеальному стані. Магазин "Свастон" залишив приємні враження, точно замовлятиму ще!
+									</p>
+									<div class="reviews-product__actions">
+										<div class="reviews-product__action-item">
+											<button class="like --active _icon-like"></button>
+											1
+										</div>
+										<div class="reviews-product__action-item">
+											<button class="dislike _icon-dislike"></button>
+											0
+										</div>
+									</div>
+								</div>
+								<div class="reviews-product__item">
+									<div class="reviews-product__header">
+										<h4 class="reviews-product__name">Віталій Т.</h4>
+										<div class="reviews-product__date">22 червня 2025</div>
+									</div>
+									<div class="reviews-product__rating">
+										<div data-fls-rating="" data-fls-rating-value="5" class="rating"></div>
+									</div>
+									<p class="reviews-product__text">
+										Дуже гарна якість товару! Крутий принт, кольори насичені, малюнок чіткий. Доставка швидка, все прийшло
+              вчасно і в ідеальному стані. Магазин "Свастон" залишив приємні враження, точно замовлятиму ще!
+									</p>
+									<div class="reviews-product__actions">
+										<div class="reviews-product__action-item">
+											<button class="like _icon-like"></button>
+											2
+										</div>
+										<div class="reviews-product__action-item">
+											<button class="dislike --active _icon-dislike"></button>
+											1
+										</div>
+									</div>
+								</div>
+								<button class="reviews-product__button button button--border">Всі відгуки</button>
+							</div>
+							<!--
+<div class="reviews-product__body">
+<div class="reviews-product__empty">
+<h3 class="reviews-product__empty-title">
+Ще немає відгуків
+</h3>
+<div class="reviews-product__empty-label">
+Нажаль поки що ніхто не встиг оцінити товар.
+</div>
+</div>
+<div class="reviews-product__empty-content">
+<div class="reviews-product__bg-label bg-label">
+<b>Залиште відгук</b> та отримайте <b>150₴</b> бонусами на наступне замовлення
+</div>
+<button data-fls-popup-link="review-popup" class="reviews-product__button button button--border">
+Станьте першим
+</button>
+</div>
+</div>
+-->
+						</div>
+					</section>
+					<!--
+<section class="product__products-section products-section">
+<div class="products-section__container">
+<div class="products-section__header">
+<div class="products-section__title section-title">
+<span>дивись які</span>
+<h2>Луки</h2>
+</div>
+</div>
+<div class="products-section__bundle bundle-products">
+<div data-fls-slider class="bundle-products__slider splide">
+<div class="splide__track">
+<ul class="splide__list">
+<li class="splide__slide">
+<include src="@components/layout/products/products.html"
+locals='{"type":"default", "src": "@img/products/01.png", "category": "Худі", "name": "Drohnenwaffe Oversize"}'>
+</include>
+</li>
+<li class="splide__slide">
+<include src="@components/layout/products/products.html"
+locals='{"type":"new", "src": "@img/products/02.png", "category": "Худі", "name": "Konovalets"}'>
+</include>
+</li>
+<li class="splide__slide">
+<include src="@components/layout/products/products.html"
+locals='{"type":"default", "src": "@img/products/03.png", "category": "Худі", "name": "Vegvisir Oversize"}'>
+</include>
+</li>
+</ul>
+</div>
+</div>
+<div class="bundle-products__body">
+<h3 class="bundle-products__title">
+<span>КОМПЛЕКТ</span>
+</h3>
+<div class="bundle-products__content">
+<div class="bundle-products__price">
+<span>
+5 050 ₴
+</span>
+4300 ₴
+</div>
+<button class="bundle-products__button button">
+<span>ДОДАТИ ДО КОШИКА</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+<path d="M1 1.5H15M15 1.5V15.5M15 1.5L1 15.5" stroke="white" stroke-width="2" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+-->
 					<section class="product__products-section products-section">
 						<div class="products-section__container">
 							<div class="products-section__header">
