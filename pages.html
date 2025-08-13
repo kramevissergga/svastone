@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Профіль</title>
+		<title>Сторінки</title>
 		<script type="module" crossorigin="" src="./js/app.min.js?v=1755078098999"></script>
 		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755078098999">
 	</head>
@@ -579,179 +579,27 @@
 				</div>
 			</div>
 			<main class="page">
-				<div class="page__profile profile">
-					<div class="profile__container">
-						<div class="profile__breadcrumbs breadcrumbs">
-							<ul>
-								<li>
-									<a href="#">Головна</a>
-								</li>
-								<li>
-									<a href="#">Кабінет</a>
-								</li>
-							</ul>
-						</div>
-						<h1 class="profile__title">Андрій Х.</h1>
-						<div class="profile__wrapper">
-							<div data-fls-spoilers="767.98, max" class="profile__aside">
-								<details>
-									<summary>
-										Особистий кабінет
-										<div class="plus-icon"></div>
-									</summary>
-									<!-- {"href": "profile-addresses.html", "ancor": "Aдресна книга", "icon": "location"}, {"href": "profile-wait.html", "ancor": "товари, які я очікую", "icon": "wait"}, -->
-									<div class="profile__menu">
-										<a href="profile-edit.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#user"></use>
-												</svg>
-											</div>
-											<span>Редагувати обліковий запис</span>
-										</a>
-										<a href="profile-pass.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#pass"></use>
-												</svg>
-											</div>
-											<span>Змінити пароль</span>
-										</a>
-										<a href="profile-wishlist.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
-												</svg>
-											</div>
-											<span>список бажаних товарів</span>
-										</a>
-										<a href="profile-news.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#news"></use>
-												</svg>
-											</div>
-											<span>розсилка новин</span>
-										</a>
-										<a href="profile-history.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#history"></use>
-												</svg>
-											</div>
-											<span>історія замовлень</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#download"></use>
-												</svg>
-											</div>
-											<span>Завантаження</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#gem"></use>
-												</svg>
-											</div>
-											<span>Бонусні бали</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#back"></use>
-												</svg>
-											</div>
-											<span>Запити на повернення</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#menu"></use>
-												</svg>
-											</div>
-											<span>Транзакції</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#plus"></use>
-												</svg>
-											</div>
-											<span>Регулярні платежі</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#logout"></use>
-												</svg>
-											</div>
-											<span>Вийти</span>
-										</a>
-									</div>
-								</details>
-							</div>
-							<div class="profile__body">
-								<div class="profile__fields-block profile__fields-block--big fields-block">
-									<h3 class="fields-block__title">історія замовлень</h3>
-									<div data-fls-spoilers="" class="fields-block__history history-profile">
-										<details class="history-profile__item">
-											<summary class="history-profile__preview">
-												<div class="history-profile__header">
-													<div class="history-profile__status">Замовлення прийняте</div>
-													<div class="history-profile__icon _icon-ch-right"></div>
-												</div>
-												<h4 class="history-profile__title">футболка Tactical beard club</h4>
-												<div class="history-profile__info">
-													<div class="history-profile__size">
-														Розмір:
-														<b>S</b>
-													</div>
-													<div class="history-profile__price">1 090 ₴</div>
-												</div>
-											</summary>
-											<div class="history-profile__body">
-												<div class="history-profile__summary summary-comp">
-													<div class="summary-comp__item">
-														<span>ПІБ:</span>
-														<span>Андрій Хартов Батькович</span>
-													</div>
-													<div class="summary-comp__item">
-														<span>Оплата:</span>
-														<span>90 ₴</span>
-													</div>
-													<div class="summary-comp__item">
-														<span>Адреса доставки:</span>
-														<span>м. Суми, Відділення НП №12</span>
-													</div>
-													<div class="summary-comp__item">
-														<span>Email:</span>
-														<span>andyheart@gmail.com</span>
-													</div>
-													<div class="summary-comp__item">
-														<span>Вартість:</span>
-														<span>1 000 ₴</span>
-													</div>
-													<div class="summary-comp__item">
-														<span>Доставка:</span>
-														<span>90 ₴</span>
-													</div>
-													<div class="summary-comp__item">
-														<span>Разом:</span>
-														<span class="total">1090 ₴</span>
-													</div>
-												</div>
-												<button class="history-profile__button button button--border">Скасувати замовлення</button>
-											</div>
-										</details>
-									</div>
-								</div>
-							</div>
-						</div>
+				<div class="page__pages pages">
+					<div class="pages__container">
+						<a href="index.html" class="button">Головна</a>
+						<a href="catalog.html" class="button">Каталог</a>
+						<a href="catalog-sales.html" class="button">Каталог(акції)</a>
+						<a href="product.html" class="button">Товар</a>
+						<a href="cart.html" class="button">Кошик</a>
+						<a href="checkout.html" class="button">Оформлення замовлення</a>
+						<a href="profile-edit.html" class="button">Профіль</a>
+						<a href="popups.html" class="button">Попапи</a>
 					</div>
 				</div>
 			</main>
+			<style>
+				.pages__container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+			</style>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__top">
 					<div class="footer__container">
