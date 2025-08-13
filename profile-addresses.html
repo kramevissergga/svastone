@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Сторінки</title>
+		<title>Профіль</title>
 		<script type="module" crossorigin="" src="./js/app.min.js?v=1755111718515"></script>
 		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755111718515">
 	</head>
@@ -589,27 +589,171 @@
 				</div>
 			</div>
 			<main class="page">
-				<div class="page__pages pages">
-					<div class="pages__container">
-						<a href="index.html" class="button">Головна</a>
-						<a href="catalog.html" class="button">Каталог</a>
-						<a href="catalog-sales.html" class="button">Каталог(акції)</a>
-						<a href="product.html" class="button">Товар</a>
-						<a href="cart.html" class="button">Кошик</a>
-						<a href="checkout.html" class="button">Оформлення замовлення</a>
-						<a href="profile-edit.html" class="button">Профіль</a>
-						<a href="popups.html" class="button">Попапи</a>
+				<div class="page__profile profile">
+					<div class="profile__container">
+						<div class="profile__breadcrumbs breadcrumbs">
+							<ul>
+								<li>
+									<a href="#">Головна</a>
+								</li>
+								<li>
+									<a href="#">Кабінет</a>
+								</li>
+							</ul>
+						</div>
+						<h1 class="profile__title">Андрій Х.</h1>
+						<div class="profile__wrapper">
+							<div data-fls-spoilers="767.98, max" class="profile__aside">
+								<details>
+									<summary>
+										Особистий кабінет
+										<div class="plus-icon"></div>
+									</summary>
+									<!-- , , -->
+									<div class="profile__menu">
+										<a href="profile-edit.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#user"></use>
+												</svg>
+											</div>
+											<span>Редагувати обліковий запис</span>
+										</a>
+										<a href="profile-pass.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#pass"></use>
+												</svg>
+											</div>
+											<span>Змінити пароль</span>
+										</a>
+										<a href="profile-addresses.html" class="profile__menu-item --active">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
+												</svg>
+											</div>
+											<span>Aдресна книга</span>
+										</a>
+										<a href="profile-addresses-add.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
+												</svg>
+											</div>
+											<span>Додати адресу</span>
+										</a>
+										<a href="profile-wishlist.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
+												</svg>
+											</div>
+											<span>список бажаних товарів</span>
+										</a>
+										<a href="profile-wishlist-edit.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
+												</svg>
+											</div>
+											<span>список бажаних товарів (вибрати)</span>
+										</a>
+										<a href="profile-news.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#news"></use>
+												</svg>
+											</div>
+											<span>розсилка новин</span>
+										</a>
+										<a href="profile-wait.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#wait"></use>
+												</svg>
+											</div>
+											<span>товари, які я очікую</span>
+										</a>
+										<a href="profile-history.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#history"></use>
+												</svg>
+											</div>
+											<span>історія замовлень</span>
+										</a>
+										<a href="profile-downloads.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#download"></use>
+												</svg>
+											</div>
+											<span>завантаження</span>
+										</a>
+										<a href="profile-bonuses.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#gem"></use>
+												</svg>
+											</div>
+											<span>Бонусні бали</span>
+										</a>
+										<a href="profile-refund.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#back"></use>
+												</svg>
+											</div>
+											<span>Запити на повернення</span>
+										</a>
+										<a href="profile-payments.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#menu"></use>
+												</svg>
+											</div>
+											<span>Транзакції</span>
+										</a>
+										<a href="profile-sub.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#plus"></use>
+												</svg>
+											</div>
+											<span>Регулярні платежі</span>
+										</a>
+										<a href="#" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#logout"></use>
+												</svg>
+											</div>
+											<span>Вийти</span>
+										</a>
+									</div>
+								</details>
+							</div>
+							<div class="profile__body">
+								<div class="profile__fields-block profile__fields-block--big fields-block">
+									<h3 class="fields-block__title">Aдресна книга</h3>
+									<div class="fields-block__field field">
+										<label class="field__label">Ваша основна адреса</label>
+										<input readonly value="м. Київ, бул. Тараса Шевченка, 8, Відділення НП №291" type="text" class="field__input">
+									</div>
+									<div class="fields-block__field field">
+										<label class="field__label">Ваша додадкова адреса</label>
+										<input readonly value="м. Суми, вул. Петра Борисенка, 16, Відділення НП №12" type="text" class="field__input">
+									</div>
+									<div class="fields-block__footer">
+										<button class="fields-block__button fields-block__button--addresses button button--border">+ Додати адресу</button>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</main>
-			<style>
-				.pages__container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
-  }
-			</style>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__top">
 					<div class="footer__container">

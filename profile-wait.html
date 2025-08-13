@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Сторінки</title>
+		<title>Профіль</title>
 		<script type="module" crossorigin="" src="./js/app.min.js?v=1755111718515"></script>
 		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755111718515">
 	</head>
@@ -589,27 +589,288 @@
 				</div>
 			</div>
 			<main class="page">
-				<div class="page__pages pages">
-					<div class="pages__container">
-						<a href="index.html" class="button">Головна</a>
-						<a href="catalog.html" class="button">Каталог</a>
-						<a href="catalog-sales.html" class="button">Каталог(акції)</a>
-						<a href="product.html" class="button">Товар</a>
-						<a href="cart.html" class="button">Кошик</a>
-						<a href="checkout.html" class="button">Оформлення замовлення</a>
-						<a href="profile-edit.html" class="button">Профіль</a>
-						<a href="popups.html" class="button">Попапи</a>
+				<div class="page__profile profile">
+					<div class="profile__container">
+						<div class="profile__breadcrumbs breadcrumbs">
+							<ul>
+								<li>
+									<a href="#">Головна</a>
+								</li>
+								<li>
+									<a href="#">Кабінет</a>
+								</li>
+							</ul>
+						</div>
+						<h1 class="profile__title">Андрій Х.</h1>
+						<div class="profile__wrapper">
+							<div data-fls-spoilers="767.98, max" class="profile__aside">
+								<details>
+									<summary>
+										Особистий кабінет
+										<div class="plus-icon"></div>
+									</summary>
+									<!-- , , -->
+									<div class="profile__menu">
+										<a href="profile-edit.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#user"></use>
+												</svg>
+											</div>
+											<span>Редагувати обліковий запис</span>
+										</a>
+										<a href="profile-pass.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#pass"></use>
+												</svg>
+											</div>
+											<span>Змінити пароль</span>
+										</a>
+										<a href="profile-addresses.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
+												</svg>
+											</div>
+											<span>Aдресна книга</span>
+										</a>
+										<a href="profile-addresses-add.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
+												</svg>
+											</div>
+											<span>Додати адресу</span>
+										</a>
+										<a href="profile-wishlist.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
+												</svg>
+											</div>
+											<span>список бажаних товарів</span>
+										</a>
+										<a href="profile-wishlist-edit.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
+												</svg>
+											</div>
+											<span>список бажаних товарів (вибрати)</span>
+										</a>
+										<a href="profile-news.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#news"></use>
+												</svg>
+											</div>
+											<span>розсилка новин</span>
+										</a>
+										<a href="profile-wait.html" class="profile__menu-item --active">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#wait"></use>
+												</svg>
+											</div>
+											<span>товари, які я очікую</span>
+										</a>
+										<a href="profile-history.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#history"></use>
+												</svg>
+											</div>
+											<span>історія замовлень</span>
+										</a>
+										<a href="profile-downloads.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#download"></use>
+												</svg>
+											</div>
+											<span>завантаження</span>
+										</a>
+										<a href="profile-bonuses.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#gem"></use>
+												</svg>
+											</div>
+											<span>Бонусні бали</span>
+										</a>
+										<a href="profile-refund.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#back"></use>
+												</svg>
+											</div>
+											<span>Запити на повернення</span>
+										</a>
+										<a href="profile-payments.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#menu"></use>
+												</svg>
+											</div>
+											<span>Транзакції</span>
+										</a>
+										<a href="profile-sub.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#plus"></use>
+												</svg>
+											</div>
+											<span>Регулярні платежі</span>
+										</a>
+										<a href="#" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#logout"></use>
+												</svg>
+											</div>
+											<span>Вийти</span>
+										</a>
+									</div>
+								</details>
+							</div>
+							<div class="profile__body">
+								<div class="profile__wishlist wishlist-profile">
+									<div class="wishlist-profile__header">
+										<label class="wishlist-profile__border-check border-check">
+											<input type="checkbox">
+											Тільки зі знижками
+										</label>
+										<button class="wishlist-profile__button button button--border">КУПИТИ ВСЕ</button>
+										<button class="wishlist-profile__button button button--black-border">ВИБІР</button>
+										<div class="separator"></div>
+										<div class="wishlist-profile__sort">
+											<select name="form[]" data-fls-select="" data-fls-select-modif="sort">
+												<option value="">Сортування</option>
+												<option value="2">За популярністю</option>
+												<option value="3">Спочатку дешевші</option>
+												<option value="4" selected>Спочатку нові</option>
+											</select>
+										</div>
+									</div>
+									<div class="wishlist-profile__items">
+										<article class="item-product">
+											<div class="item-product__image">
+												<a href="#"></a>
+												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__header">
+													<div class="item-product__tag item-product__tag--green">Тепер в наявності</div>
+													<div class="separator"></div>
+													<div class="item-product__fav fav-btn _icon-heart-fill"></div>
+												</div>
+												<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
+											</div>
+											<div class="item-product__body">
+												<h3 class="item-product__title">
+													<a href="#">
+														Футболка
+														<span>Drohnenwaffe Oversize</span>
+													</a>
+												</h3>
+												<div class="item-product__price">1 250 ₴</div>
+											</div>
+										</article>
+										<article class="item-product --disabled">
+											<div class="item-product__image">
+												<a href="#"></a>
+												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__header">
+													<div class="item-product__tag item-product__tag--black">Тепер в наявності</div>
+													<div class="separator"></div>
+													<div class="item-product__fav fav-btn _icon-heart-fill"></div>
+												</div>
+												<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
+											</div>
+											<div class="item-product__body">
+												<h3 class="item-product__title">
+													<a href="#">
+														Футболка
+														<span>Drohnenwaffe Oversize</span>
+													</a>
+												</h3>
+												<div class="item-product__price">1 250 ₴</div>
+											</div>
+										</article>
+										<article class="item-product --disabled">
+											<div class="item-product__image">
+												<a href="#"></a>
+												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__header">
+													<div class="item-product__tag item-product__tag--black">Тепер в наявності</div>
+													<div class="separator"></div>
+													<div class="item-product__fav fav-btn _icon-heart-fill"></div>
+												</div>
+												<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
+											</div>
+											<div class="item-product__body">
+												<h3 class="item-product__title">
+													<a href="#">
+														Футболка
+														<span>Drohnenwaffe Oversize</span>
+													</a>
+												</h3>
+												<div class="item-product__price">1 250 ₴</div>
+											</div>
+										</article>
+										<article class="item-product --disabled">
+											<div class="item-product__image">
+												<a href="#"></a>
+												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__header">
+													<div class="item-product__tag item-product__tag--black">Тепер в наявності</div>
+													<div class="separator"></div>
+													<div class="item-product__fav fav-btn _icon-heart-fill"></div>
+												</div>
+												<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
+											</div>
+											<div class="item-product__body">
+												<h3 class="item-product__title">
+													<a href="#">
+														Футболка
+														<span>Drohnenwaffe Oversize</span>
+													</a>
+												</h3>
+												<div class="item-product__price">1 250 ₴</div>
+											</div>
+										</article>
+										<article class="item-product --disabled">
+											<div class="item-product__image">
+												<a href="#"></a>
+												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__header">
+													<div class="item-product__tag item-product__tag--black">Тепер в наявності</div>
+													<div class="separator"></div>
+													<div class="item-product__fav fav-btn _icon-heart-fill"></div>
+												</div>
+												<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
+											</div>
+											<div class="item-product__body">
+												<h3 class="item-product__title">
+													<a href="#">
+														Футболка
+														<span>Drohnenwaffe Oversize</span>
+													</a>
+												</h3>
+												<div class="item-product__price">1 250 ₴</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</main>
-			<style>
-				.pages__container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
-  }
-			</style>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__top">
 					<div class="footer__container">

@@ -6,8 +6,8 @@
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Профіль</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1755078662646"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755078662646">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1755111718515"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755111718515">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -578,6 +578,16 @@
 					</div>
 				</div>
 			</div>
+			<div data-fls-popup="sizes-popup" aria-hidden="true" class="popup popup--sizes">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
+						<div class="sizes-popup">
+							<img alt="Image" class="sizes-popup__image" src="./assets/img/sizes.webp">
+						</div>
+					</div>
+				</div>
+			</div>
 			<main class="page">
 				<div class="page__profile profile">
 					<div class="profile__container">
@@ -599,7 +609,7 @@
 										Особистий кабінет
 										<div class="plus-icon"></div>
 									</summary>
-									<!-- {"href": "profile-addresses.html", "ancor": "Aдресна книга", "icon": "location"}, {"href": "profile-wait.html", "ancor": "товари, які я очікую", "icon": "wait"}, -->
+									<!-- , , -->
 									<div class="profile__menu">
 										<a href="profile-edit.html" class="profile__menu-item --active">
 											<div class="profile__menu-icon">
@@ -617,6 +627,22 @@
 											</div>
 											<span>Змінити пароль</span>
 										</a>
+										<a href="profile-addresses.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
+												</svg>
+											</div>
+											<span>Aдресна книга</span>
+										</a>
+										<a href="profile-addresses-add.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
+												</svg>
+											</div>
+											<span>Додати адресу</span>
+										</a>
 										<a href="profile-wishlist.html" class="profile__menu-item">
 											<div class="profile__menu-icon">
 												<svg>
@@ -624,6 +650,14 @@
 												</svg>
 											</div>
 											<span>список бажаних товарів</span>
+										</a>
+										<a href="profile-wishlist-edit.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
+												</svg>
+											</div>
+											<span>список бажаних товарів (вибрати)</span>
 										</a>
 										<a href="profile-news.html" class="profile__menu-item">
 											<div class="profile__menu-icon">
@@ -633,6 +667,14 @@
 											</div>
 											<span>розсилка новин</span>
 										</a>
+										<a href="profile-wait.html" class="profile__menu-item">
+											<div class="profile__menu-icon">
+												<svg>
+													<use xlink:href="./assets/img/profile-menu-icons.svg#wait"></use>
+												</svg>
+											</div>
+											<span>товари, які я очікую</span>
+										</a>
 										<a href="profile-history.html" class="profile__menu-item">
 											<div class="profile__menu-icon">
 												<svg>
@@ -641,15 +683,15 @@
 											</div>
 											<span>історія замовлень</span>
 										</a>
-										<a href="#" class="profile__menu-item">
+										<a href="profile-downloads.html" class="profile__menu-item">
 											<div class="profile__menu-icon">
 												<svg>
 													<use xlink:href="./assets/img/profile-menu-icons.svg#download"></use>
 												</svg>
 											</div>
-											<span>Завантаження</span>
+											<span>завантаження</span>
 										</a>
-										<a href="#" class="profile__menu-item">
+										<a href="profile-bonuses.html" class="profile__menu-item">
 											<div class="profile__menu-icon">
 												<svg>
 													<use xlink:href="./assets/img/profile-menu-icons.svg#gem"></use>
@@ -657,7 +699,7 @@
 											</div>
 											<span>Бонусні бали</span>
 										</a>
-										<a href="#" class="profile__menu-item">
+										<a href="profile-refund.html" class="profile__menu-item">
 											<div class="profile__menu-icon">
 												<svg>
 													<use xlink:href="./assets/img/profile-menu-icons.svg#back"></use>
@@ -665,7 +707,7 @@
 											</div>
 											<span>Запити на повернення</span>
 										</a>
-										<a href="#" class="profile__menu-item">
+										<a href="profile-payments.html" class="profile__menu-item">
 											<div class="profile__menu-icon">
 												<svg>
 													<use xlink:href="./assets/img/profile-menu-icons.svg#menu"></use>
@@ -673,7 +715,7 @@
 											</div>
 											<span>Транзакції</span>
 										</a>
-										<a href="#" class="profile__menu-item">
+										<a href="profile-sub.html" class="profile__menu-item">
 											<div class="profile__menu-icon">
 												<svg>
 													<use xlink:href="./assets/img/profile-menu-icons.svg#plus"></use>
