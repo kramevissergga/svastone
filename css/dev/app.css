@@ -5228,7 +5228,7 @@ body::after {
     max-width: 56.25rem;
   }
   .wishlist-profile .item-product__title span {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .wishlist-profile .item-product__body {
     padding: 1.1875rem 0.8125rem 0;
