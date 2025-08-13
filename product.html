@@ -6,8 +6,8 @@
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Товар</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1754618475161"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1754618475161">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1755076721211"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755076721211">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -180,9 +180,141 @@
 						<button data-fls-dynamic=".header__container, 1199.98, 1" class="header__action-btn _icon-search"></button>
 						<button class="header__action-btn _icon-user"></button>
 						<button class="header__action-btn _icon-heart"></button>
-						<button data-fls-dynamic=".header__settings, 1199.98, last" class="header__action-btn _icon-basket">
-							<span>1</span>
-						</button>
+						<div class="header__cart" data-fls-dynamic=".header__settings, 1199.98, last">
+							<button data-cart-toggle="" class="header__action-btn _icon-basket">
+								<span>1</span>
+							</button>
+							<div class="header__basket basket-header">
+								<div class="basket-header__header">
+									<h2 class="basket-header__title">Корзина</h2>
+									<a href="#" class="basket-header__link">Очистити</a>
+									<div class="separator"></div>
+									<button data-cart-toggle="" class="basket-header__close _icon-cross"></button>
+								</div>
+								<div data-fls-simplebar="" class="basket-header__body">
+									<div class="basket-header__items">
+										<div class="basket-header__item item-cart">
+											<a href="#" class="item-cart__image">
+												<img alt="Image" class="ibg" src="./assets/img/products/01.webp">
+											</a>
+											<h3 class="item-cart__title">
+												<a href="#">футболка Tactical beard club</a>
+											</h3>
+											<button class="item-cart__remove _icon-cross"></button>
+											<div class="item-cart__counter">
+												<span>Кількість:</span>
+												<div class="counter">
+													<button class="counter__btn counter__btn--decrement icon-btn">
+														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewbox="0 0 16 2" fill="none">
+															<path d="M0 2V0H16V2H0Z" fill="var(--color, #FFF)"></path>
+														</svg>
+													</button>
+													<input value="1" type="number" class="counter__input">
+													<button class="counter__btn counter__btn--increment icon-btn">
+														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+															<path d="M6.97179 16V8.82759H0V6.98851H6.97179V0H9.02821V6.98851H16V8.82759H9.02821V16H6.97179Z" fill="var(--color, #FFF)"></path>
+														</svg>
+													</button>
+												</div>
+											</div>
+											<div class="item-cart__size-label">
+												Розмір:
+												<span>S</span>
+											</div>
+											<div class="item-cart__price">1 090 ₴</div>
+										</div>
+										<div class="basket-header__item item-cart">
+											<a href="#" class="item-cart__image">
+												<img alt="Image" class="ibg" src="./assets/img/products/01.webp">
+											</a>
+											<h3 class="item-cart__title">
+												<a href="#">футболка Tactical beard club</a>
+											</h3>
+											<button class="item-cart__remove _icon-cross"></button>
+											<div class="item-cart__counter">
+												<span>Кількість:</span>
+												<div class="counter">
+													<button class="counter__btn counter__btn--decrement icon-btn">
+														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewbox="0 0 16 2" fill="none">
+															<path d="M0 2V0H16V2H0Z" fill="var(--color, #FFF)"></path>
+														</svg>
+													</button>
+													<input value="1" type="number" class="counter__input">
+													<button class="counter__btn counter__btn--increment icon-btn">
+														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+															<path d="M6.97179 16V8.82759H0V6.98851H6.97179V0H9.02821V6.98851H16V8.82759H9.02821V16H6.97179Z" fill="var(--color, #FFF)"></path>
+														</svg>
+													</button>
+												</div>
+											</div>
+											<div class="item-cart__size-label">
+												Розмір:
+												<span>S</span>
+											</div>
+											<div class="item-cart__price">1 090 ₴</div>
+										</div>
+										<div class="basket-header__item item-cart">
+											<a href="#" class="item-cart__image">
+												<img alt="Image" class="ibg" src="./assets/img/products/01.webp">
+											</a>
+											<h3 class="item-cart__title">
+												<a href="#">футболка Tactical beard club</a>
+											</h3>
+											<button class="item-cart__remove _icon-cross"></button>
+											<div class="item-cart__counter">
+												<span>Кількість:</span>
+												<div class="counter">
+													<button class="counter__btn counter__btn--decrement icon-btn">
+														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewbox="0 0 16 2" fill="none">
+															<path d="M0 2V0H16V2H0Z" fill="var(--color, #FFF)"></path>
+														</svg>
+													</button>
+													<input value="1" type="number" class="counter__input">
+													<button class="counter__btn counter__btn--increment icon-btn">
+														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+															<path d="M6.97179 16V8.82759H0V6.98851H6.97179V0H9.02821V6.98851H16V8.82759H9.02821V16H6.97179Z" fill="var(--color, #FFF)"></path>
+														</svg>
+													</button>
+												</div>
+											</div>
+											<div class="item-cart__size-label">
+												Розмір:
+												<span>S</span>
+											</div>
+											<div class="item-cart__price">1 090 ₴</div>
+										</div>
+									</div>
+									<div class="basket-header__summary summary-comp">
+										<div class="summary-comp__item">
+											<span>Вартість:</span>
+											<span>3 270 ₴</span>
+										</div>
+										<div class="summary-comp__item">
+											<span>Доставка:</span>
+											<span>90 ₴</span>
+										</div>
+										<div class="summary-comp__item">
+											<span>Разом:</span>
+											<span class="total">3 360 ₴</span>
+										</div>
+									</div>
+									<button class="basket-header__button button">
+										Оформити замовлення
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+											<path d="M1 1.64142H15M15 1.64142V15.6414M15 1.64142L1 15.6414" stroke="var(--color, #FFF)" stroke-width="2"></path>
+										</svg>
+									</button>
+									<div class="basket-header__footer">
+										<a href="#" class="basket-header__btn-link button button--black-border">До кошика</a>
+										<div class="basket-header__payment">
+											<img alt="Image" src="./assets/img/payments/04.webp">
+											<img alt="Image" src="./assets/img/payments/05.webp">
+											<img alt="Image" src="./assets/img/payments/06.webp">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="header__settings">
 						<button data-fls-dynamic=".mobile-menu, 1199.98, 4" data-theme-toggle="" class="header__theme">
@@ -258,12 +390,96 @@
 				</div>
 				<button class="mobile-menu__logout">Вийти з акаунта</button>
 			</div>
-			<div data-fls-popup="auth-popup" aria-hidden="true" class="popup popup--auth">
+			<div data-fls-popup="login-popup" aria-hidden="true" class="popup popup--auth">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
 					<div data-fls-popup-body="" class="popup__body">
 						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
-						<div class="auth-popup">
-							<div class="auth-popup__aside"></div>
+						<div class="auth-popup auth-popup--login">
+							<div class="auth-popup__aside">
+								<img alt="Image" class="auth-popup__image" src="./assets/img/auth-popup/login-image.webp">
+								<div class="auth-popup__decor">
+									<img src="./assets/img/auth-popup/decor.svg" alt="Image" class="ibg ibg--contain">
+								</div>
+								<img src="./assets/img/auth-popup/logo.svg" alt="Image" class="auth-popup__logo">
+							</div>
+							<div class="auth-popup__body">
+								<form action="#" method="POST" enctype="multipart/form-data" class="auth-popup__form">
+									<div class="auth-popup__header">
+										<h2 class="auth-popup__title">Увійти в акаунт</h2>
+										<a href="#" class="auth-popup__link">хочу зареєструватися</a>
+									</div>
+									<div class="auth-popup__field field">
+										<label class="field__label">Email</label>
+										<input type="email" name="email" placeholder="Ваш email" class="field__input">
+									</div>
+									<div class="auth-popup__field field">
+										<label class="field__label">Пароль</label>
+										<input type="password" name="password" class="field__input">
+									</div>
+									<div class="auth-popup__integrations">
+										<a href="#">
+											<img src="./assets/img/auth-popup/google.svg" alt="Image">
+										</a>
+									</div>
+									<button class="auth-popup__button button">
+										<span>Увійти</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+											<path d="M1 1.64142H15M15 1.64142V15.6414M15 1.64142L1 15.6414" stroke="var(--color, #FFF)" stroke-width="2"></path>
+										</svg>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="reg-popup" aria-hidden="true" class="popup popup--auth">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
+						<div class="auth-popup auth-popup--reg">
+							<div class="auth-popup__aside">
+								<img alt="Image" class="auth-popup__image" src="./assets/img/auth-popup/reg-image.webp">
+								<div class="auth-popup__decor">
+									<img src="./assets/img/auth-popup/decor.svg" alt="Image" class="ibg ibg--contain">
+								</div>
+								<img src="./assets/img/auth-popup/logo.svg" alt="Image" class="auth-popup__logo">
+							</div>
+							<div class="auth-popup__body">
+								<form action="#" method="POST" enctype="multipart/form-data" class="auth-popup__form">
+									<div class="auth-popup__header">
+										<h2 class="auth-popup__title">Увійти в акаунт</h2>
+										<a href="#" class="auth-popup__link">хочу зареєструватися</a>
+									</div>
+									<div class="auth-popup__field field">
+										<label class="field__label">Email</label>
+										<input type="email" name="email" placeholder="Ваш email" class="field__input">
+									</div>
+									<div class="auth-popup__field field">
+										<label class="field__label">Телефон</label>
+										<input type="text" name="phone" placeholder="0 9X XXX XX XX" class="field__input">
+									</div>
+									<div class="auth-popup__field field">
+										<label class="field__label">Пароль</label>
+										<input type="password" name="password" class="field__input">
+									</div>
+									<div class="auth-popup__field field">
+										<label class="field__label">Підтвердити пароль</label>
+										<input type="password" name="confirmPassword" class="field__input">
+									</div>
+									<div class="auth-popup__integrations">
+										<a href="#">
+											<img src="./assets/img/auth-popup/google.svg" alt="Image">
+										</a>
+									</div>
+									<button class="auth-popup__button button">
+										<span>ЗАРЕЄСТРУВАТИСЯ</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+											<path d="M1 1.64142H15M15 1.64142V15.6414M15 1.64142L1 15.6414" stroke="var(--color, #FFF)" stroke-width="2"></path>
+										</svg>
+									</button>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -301,22 +517,22 @@
 									бонусами на наступне замовлення
 								</div>
 								<div class="review-popup__field field">
-									<div class="field__label">
+									<label class="field__label">
 										Email
 										<span>*обов’язково для отримання бонуса</span>
-									</div>
+									</label>
 									<input type="email" name="email" placeholder="Ваш email" class="field__input">
 								</div>
 								<div class="review-popup__field field">
-									<div class="field__label">Ім’я та прізвище</div>
+									<label class="field__label">Ім’я та прізвище</label>
 									<input type="text" name="name" placeholder="Андрій Хартов" class="field__input">
 								</div>
 								<div class="review-popup__field field">
-									<div class="field__label">Телефон</div>
+									<label class="field__label">Телефон</label>
 									<input type="text" name="phone" placeholder="0 9X XXX XX XX" class="field__input">
 								</div>
 								<div class="review-popup__field field">
-									<div class="field__label">Коментар</div>
+									<label class="field__label">Коментар</label>
 									<textarea name="comment" class="field__textarea"></textarea>
 								</div>
 								<label class="review-popup__checkbox checkbox">
@@ -325,6 +541,39 @@
 								</label>
 								<div class="review-popup__button button button--border">НАПИСАТИ ВІДГУК</div>
 							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="checkout-popup" aria-hidden="true" class="popup popup--checkout">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
+						<div class="checkout-popup">
+							<div class="checkout-popup__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="156" height="156" viewbox="0 0 156 156" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M155.976 90.1195L99.0521 33.1887L111.175 21.0789L90.1084 0L33.1846 56.9308L21.0763 44.792L0 65.8708L56.9237 122.802L44.8009 134.921L65.8772 156L122.801 99.0692L134.924 111.194L156 90.1147L155.976 90.1195ZM77.9855 101.699L54.2753 77.9807L77.9855 54.2676L101.701 77.9807L77.9855 101.699Z" fill="#E2102E"></path>
+								</svg>
+							</div>
+							<h2 class="checkout-popup__title">Ваше замовлення прийняте!</h2>
+							<div class="checkout-popup__subtitle">Ми обробимо ваше замовлення та скоро воно вже буде у вас!</div>
+							<div class="checkout-popup__body">
+								<a href="#" class="checkout-popup__link _icon-s-inst">Підписатися на Instagram</a>
+								<a href="#" class="checkout-popup__link _icon-s-tg">Підписатися на Telegram</a>
+								<div class="checkout-popup__sub">
+									<div class="checkout-popup__label">Підписатися на новини</div>
+									<form action="#" class="checkout-popup__form subs-form">
+										<div class="subs-form__field field">
+											<input type="email" placeholder="Ваш email" class="field__input">
+										</div>
+										<button class="subs-form__button button button--border">Підписатися</button>
+									</form>
+								</div>
+							</div>
+							<div class="checkout-popup__footer">
+								<button data-fls-popup-close="" class="checkout-popup__button button button--black-border">ЗАКРИТИ</button>
+								<a href="#" class="checkout-popup__button button">До Особистого кабінету</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -425,6 +674,7 @@
 									</div>
 								</div>
 							</div>
+							<!-- hero-product__body --disabled -->
 							<div class="hero-product__body">
 								<div data-fls-dynamic=".hero-product__container, 499.98, first" class="hero-product__breadcrumbs breadcrumbs">
 									<ul>

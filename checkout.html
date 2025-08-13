@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Каталог</title>
+		<title>Оформлення замовлення</title>
 		<script type="module" crossorigin="" src="./js/app.min.js?v=1755076721211"></script>
 		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755076721211">
 	</head>
@@ -579,391 +579,323 @@
 				</div>
 			</div>
 			<main class="page">
-				<section class="page__catalog catalog">
-					<div class="catalog__container">
-						<div class="catalog__breadcrumbs breadcrumbs">
+				<section class="page__checkout checkout">
+					<div class="checkout__container">
+						<div class="checkout__breadcrumbs breadcrumbs">
 							<ul>
 								<li>
 									<a href="#">Головна</a>
 								</li>
 								<li>
-									<a href="#">Чоловіче</a>
+									<a href="#">Корзина</a>
 								</li>
 								<li>
-									<a href="#">Футболки</a>
+									<a href="#">Оформлення замовлення</a>
 								</li>
 							</ul>
 						</div>
-						<a href="#" class="catalog__link">￩ CATALOGUE</a>
-						<h1 class="catalog__title">Футболки</h1>
-						<div class="catalog__categories">
-							<a href="#" class="catalog__category --active">Футболки</a>
-							<a href="#" class="catalog__category">Майки</a>
-							<a href="#" class="catalog__category">Сорочки</a>
-							<a href="#" class="catalog__category">Лонгсліви</a>
-							<a href="#" class="catalog__category">Футболка</a>
-							<a href="#" class="catalog__category">Світшоти</a>
-							<a href="#" class="catalog__category">Куртки</a>
-							<a href="#" class="catalog__category">Шорти</a>
-							<a href="#" class="catalog__category">Штани</a>
-						</div>
-						<div class="catalog__filters filters-catalog">
-							<div class="filters-catalog__body">
-								<div data-fls-spoilers="768, max" class="filters-catalog__wrapper">
-									<button data-filter-toggle="" class="filters-catalog__close button button--black">Закрити</button>
-									<label class="filters-catalog__border-check border-check">
-										<input type="checkbox">
-										Тільки зі знижками
-									</label>
-									<details class="filters-catalog__item">
-										<summary class="filters-catalog__title">
-											Колір
-											<span class="plus-icon"></span>
-										</summary>
-										<div class="filters-catalog__content">
-											<div class="filters-catalog__colors">
-												<label class="filters-catalog__checkbox checkbox">
-													Чорний
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Зелений
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Білий
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Помаранчевий
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Бежевий
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Рожевий
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Синій
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Червоний
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Коричневий
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Камуфляжний
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Сірий
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Різнокольоровий
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Жовтий
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													Світловідбиваючий
-													<input type="checkbox">
-												</label>
+						<form action="#" enctype="multipart/form-data" method="POST" class="checkout__wrapper">
+							<div class="checkout__body">
+								<div class="checkout__block">
+									<div class="checkout__login">
+										<h2 class="checkout__title">Увійдіть для оформлення замовлення</h2>
+										<div class="checkout__login-form">
+											<div class="checkout__field field">
+												<label for="firstName" class="field__label">Вашe Iм’я</label>
+												<input type="text" id="firstName" name="firstName" class="field__input">
+											</div>
+											<div class="checkout__field field">
+												<label for="lastName" class="field__label">Прізвище</label>
+												<input type="text" name="lastName" id="lastName" class="field__input">
+											</div>
+											<div class="checkout__field field">
+												<label class="field__label">Телефон</label>
+												<input type="text" name="phone" class="field__input">
+											</div>
+											<div class="checkout__field field">
+												<label for="phone" class="field__label">Пароль</label>
+												<input type="password" name="password" id="password" class="field__input">
+											</div>
+											<div class="checkout__field field">
+												<label for="phone" class="field__label">Підтвердити пароль</label>
+												<input type="password" name="repeatPassword" id="repeatPassword" class="field__input">
 											</div>
 										</div>
-									</details>
-									<details class="filters-catalog__item">
-										<summary class="filters-catalog__title">
-											Розмір
-											<span class="plus-icon"></span>
-										</summary>
-										<div class="filters-catalog__content">
-											<div class="filters-catalog__sizes">
-												<label class="filters-catalog__checkbox checkbox">
-													S
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													M
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													L
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													XL
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													XXL
-													<input type="checkbox">
-												</label>
-												<label class="filters-catalog__checkbox checkbox">
-													XXXL
-													<input type="checkbox">
-												</label>
-											</div>
-										</div>
-									</details>
+									</div>
 								</div>
-								<div class="filters-catalog__sort">
-									<button data-filter-toggle="" class="filters-catalog__open button button--black">
-										Показати фільтри
-										<div class="plus-icon"></div>
-									</button>
-									<select name="form[]" data-fls-select="" data-fls-select-modif="sort">
-										<option value="" selected>Сортування</option>
-										<option value="2">За популярністю</option>
-										<option value="3">Спочатку дешевші</option>
-										<option value="4">Спочатку нові</option>
-									</select>
-									<label class="filters-catalog__sort-radio _icon-sort">
-										Спочатку нові
-										<input checked type="radio" name="sort">
-									</label>
-									<label class="filters-catalog__sort-radio _icon-sort">
-										Спочатку дешевші
-										<input type="radio" name="sort">
-									</label>
-									<label class="filters-catalog__sort-radio _icon-sort">
-										За популярністю
-										<input type="radio" name="sort">
-									</label>
+								<div class="checkout__block">
+									<h2 class="checkout__title">Доставка</h2>
+									<div class="checkout__sub-block">
+										<label class="checkout__radiobox radiobox">
+											<div class="radiobox__icon"></div>
+											<div class="radiobox__text">
+												Нова Пошта -
+												<b>90 ₴</b>
+											</div>
+											<input checked type="radio" name="shipping">
+										</label>
+										<div class="checkout__shipping">
+											<div class="checkout__shipping-field field">
+												<label class="field__label">Виберіть відділення</label>
+												<select name="form[]" data-fls-select="">
+													<option value="" selected>Введіть адресу або номер відділення</option>
+													<option value="2">Пункт №1</option>
+													<option value="3">Пункт №2</option>
+													<option value="4">Пункт №3</option>
+												</select>
+											</div>
+										</div>
+										<label class="checkout__checkbox checkbox">
+											Зберегти адресу
+											<input type="checkbox">
+										</label>
+									</div>
+									<div class="checkout__sub-block checkout__sub-block--no-border">
+										<label class="checkout__radiobox radiobox">
+											<div class="radiobox__icon"></div>
+											<div class="radiobox__text">Самовивіз з магазину (м.Київ, вул. Турівська, 29) - 0.00 ₴</div>
+											<input type="radio" name="shipping">
+										</label>
+									</div>
+								</div>
+								<div class="checkout__block">
+									<h2 class="checkout__title">Доставка</h2>
+									<div class="checkout__sub-block">
+										<label class="checkout__radiobox radiobox">
+											<div class="radiobox__icon"></div>
+											<div class="radiobox__text">Оплата на сайті</div>
+											<input checked type="radio" name="payment">
+										</label>
+										<div class="checkout__payment">
+											<label class="checkout__payment-item">
+												<img class="ibg ibg--contain" alt="Image" src="./assets/img/payments/04.webp">
+												<input checked name="paymentMethod" type="radio">
+											</label>
+											<label class="checkout__payment-item">
+												<img class="ibg ibg--contain" alt="Image" src="./assets/img/payments/05.webp">
+												<input name="paymentMethod" type="radio">
+											</label>
+											<label class="checkout__payment-item">
+												<img class="ibg ibg--contain" alt="Image" src="./assets/img/payments/06.webp">
+												<input name="paymentMethod" type="radio">
+											</label>
+										</div>
+									</div>
+									<div class="checkout__sub-block checkout__sub-block--no-border">
+										<label class="checkout__radiobox radiobox">
+											<div class="radiobox__icon"></div>
+											<div class="radiobox__text">Оплата на рахунок (реквізити в SMS)</div>
+											<input type="radio" name="payment">
+										</label>
+										<label class="checkout__radiobox radiobox">
+											<div class="radiobox__icon"></div>
+											<div class="radiobox__text">При отриманні / Післяплата</div>
+											<input type="radio" name="payment">
+										</label>
+									</div>
+								</div>
+								<div class="checkout__block">
+									<h2 class="checkout__title">Коментар до замовлення</h2>
+									<div class="checkout__comments">
+										<div class="checkout__field field">
+											<label for="callBack" class="field__label">Передзвоніть мені:</label>
+											<label class="field__border-check border-check">
+												<input type="checkbox">
+												Так, я хочу щоб мені передзвонили
+											</label>
+										</div>
+										<div class="checkout__field field">
+											<label for="comment" class="field__label">Коментар</label>
+											<textarea name="comment" class="field__textarea" id="comment"></textarea>
+										</div>
+										<div class="checkout__footer">
+											<button type="button" class="checkout__button button button--black-border">НАЗАД</button>
+											<button type="button" class="checkout__button button button--border">Оформити замовлення</button>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="catalog__items">
-							<article class="item-product">
-								<div class="item-product__image">
-									<a href="#"></a>
-									<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-									<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
-									<div class="item-product__header">
-										<div class="separator"></div>
-										<!-- _icon-heart-fill -->
-										<div class="item-product__fav fav-btn _icon-heart"></div>
+							<div class="checkout__aside">
+								<div class="checkout__block">
+									<div data-fls-showmore="items" class="checkout__summary">
+										<h2 class="checkout__title">Підсумок</h2>
+										<div data-fls-showmore-content="4" class="checkout__summary-items">
+											<div class="checkout__summary-item">
+												<h3 class="checkout__summary-title">
+													<a href="#">футболка Tactical beard club</a>
+												</h3>
+												<div class="checkout__summary-body">
+													<ul class="checkout__summary-details">
+														<li>
+															Розмір:
+															<b>S</b>
+														</li>
+														<li>
+															Кількість:
+															<span>1</span>
+														</li>
+													</ul>
+												</div>
+												<div class="checkout__summary-price">1 090 ₴</div>
+											</div>
+											<div class="checkout__summary-item">
+												<h3 class="checkout__summary-title">
+													<a href="#">футболка Konovalets Drohnenwaffe Oversize</a>
+												</h3>
+												<div class="checkout__summary-body">
+													<ul class="checkout__summary-details">
+														<li>
+															Розмір:
+															<b>S</b>
+														</li>
+														<li>
+															Кількість:
+															<span>1</span>
+														</li>
+													</ul>
+												</div>
+												<div class="checkout__summary-price">1 090 ₴</div>
+											</div>
+											<div class="checkout__summary-item">
+												<h3 class="checkout__summary-title">
+													<a href="#">футболка Vegvisir Oversize</a>
+												</h3>
+												<div class="checkout__summary-body">
+													<ul class="checkout__summary-details">
+														<li>
+															Розмір:
+															<b>S</b>
+														</li>
+														<li>
+															Кількість:
+															<span>1</span>
+														</li>
+													</ul>
+												</div>
+												<div class="checkout__summary-price">1 090 ₴</div>
+											</div>
+											<div class="checkout__summary-item">
+												<h3 class="checkout__summary-title">
+													<a href="#">футболка Vegvisir Oversize</a>
+												</h3>
+												<div class="checkout__summary-body">
+													<ul class="checkout__summary-details">
+														<li>
+															Розмір:
+															<b>S</b>
+														</li>
+														<li>
+															Кількість:
+															<span>1</span>
+														</li>
+													</ul>
+												</div>
+												<div class="checkout__summary-price">1 090 ₴</div>
+											</div>
+											<div class="checkout__summary-item">
+												<h3 class="checkout__summary-title">
+													<a href="#">футболка Tactical beard club</a>
+												</h3>
+												<div class="checkout__summary-body">
+													<ul class="checkout__summary-details">
+														<li>
+															Розмір:
+															<b>S</b>
+														</li>
+														<li>
+															Кількість:
+															<span>1</span>
+														</li>
+													</ul>
+												</div>
+												<div class="checkout__summary-price">1 090 ₴</div>
+											</div>
+											<div class="checkout__summary-item">
+												<h3 class="checkout__summary-title">
+													<a href="#">футболка Tactical beard club</a>
+												</h3>
+												<div class="checkout__summary-body">
+													<ul class="checkout__summary-details">
+														<li>
+															Розмір:
+															<b>S</b>
+														</li>
+														<li>
+															Кількість:
+															<span>1</span>
+														</li>
+													</ul>
+												</div>
+												<div class="checkout__summary-price">1 090 ₴</div>
+											</div>
+											<div class="checkout__summary-item">
+												<h3 class="checkout__summary-title">
+													<a href="#">футболка Tactical beard club</a>
+												</h3>
+												<div class="checkout__summary-body">
+													<ul class="checkout__summary-details">
+														<li>
+															Розмір:
+															<b>S</b>
+														</li>
+														<li>
+															Кількість:
+															<span>1</span>
+														</li>
+													</ul>
+												</div>
+												<div class="checkout__summary-price">1 090 ₴</div>
+											</div>
+											<div class="checkout__summary-item">
+												<h3 class="checkout__summary-title">
+													<a href="#">футболка Tactical beard club</a>
+												</h3>
+												<div class="checkout__summary-body">
+													<ul class="checkout__summary-details">
+														<li>
+															Розмір:
+															<b>S</b>
+														</li>
+														<li>
+															Кількість:
+															<span>1</span>
+														</li>
+													</ul>
+												</div>
+												<div class="checkout__summary-price">1 090 ₴</div>
+											</div>
+										</div>
+										<button hidden data-fls-showmore-button="" type="button" class="checkout__summary-more">
+											<span>Показати
+                  ще</span>
+											<span>Сховати</span>
+										</button>
 									</div>
-									<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
-								</div>
-								<div class="item-product__body">
-									<h3 class="item-product__title">
-										<a href="#">
-											Футболка
-											<span>Drohnenwaffe Oversize</span>
-										</a>
-									</h3>
-									<div class="item-product__price">1 250 ₴</div>
-								</div>
-							</article>
-							<article class="item-product">
-								<div class="item-product__image">
-									<a href="#"></a>
-									<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-									<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
-									<div class="item-product__header">
-										<div class="separator"></div>
-										<!-- _icon-heart-fill -->
-										<div class="item-product__fav fav-btn _icon-heart"></div>
+									<div class="basket-header__details summary-comp">
+										<div class="summary-comp__item">
+											<span>Вартість:</span>
+											<span>3 270 ₴</span>
+										</div>
+										<div class="summary-comp__item">
+											<span>Доставка:</span>
+											<span>90 ₴</span>
+										</div>
+										<div class="summary-comp__item">
+											<span>Разом:</span>
+											<span class="total">3 360 ₴</span>
+										</div>
 									</div>
-									<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
+									<button class="checkout__aside-btn button">
+										<span>Оформити замовлення</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+											<path d="M1 1.64142H15M15 1.64142V15.6414M15 1.64142L1 15.6414" stroke="var(--color, #FFF)" stroke-width="2"></path>
+										</svg>
+									</button>
 								</div>
-								<div class="item-product__body">
-									<h3 class="item-product__title">
-										<a href="#">
-											Футболка
-											<span>Drohnenwaffe Oversize</span>
-										</a>
-									</h3>
-									<div class="item-product__price">1 250 ₴</div>
-								</div>
-							</article>
-							<article class="item-product">
-								<div class="item-product__image">
-									<a href="#"></a>
-									<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-									<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
-									<div class="item-product__header">
-										<div class="separator"></div>
-										<!-- _icon-heart-fill -->
-										<div class="item-product__fav fav-btn _icon-heart"></div>
-									</div>
-									<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
-								</div>
-								<div class="item-product__body">
-									<h3 class="item-product__title">
-										<a href="#">
-											Футболка
-											<span>Drohnenwaffe Oversize</span>
-										</a>
-									</h3>
-									<div class="item-product__price">1 250 ₴</div>
-								</div>
-							</article>
-							<article class="item-product">
-								<div class="item-product__image">
-									<a href="#"></a>
-									<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-									<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
-									<div class="item-product__header">
-										<div class="separator"></div>
-										<!-- _icon-heart-fill -->
-										<div class="item-product__fav fav-btn _icon-heart"></div>
-									</div>
-									<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
-								</div>
-								<div class="item-product__body">
-									<h3 class="item-product__title">
-										<a href="#">
-											Футболка
-											<span>Drohnenwaffe Oversize</span>
-										</a>
-									</h3>
-									<div class="item-product__price">1 250 ₴</div>
-								</div>
-							</article>
-							<article class="item-product">
-								<div class="item-product__image">
-									<a href="#"></a>
-									<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-									<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
-									<div class="item-product__header">
-										<div class="separator"></div>
-										<!-- _icon-heart-fill -->
-										<div class="item-product__fav fav-btn _icon-heart"></div>
-									</div>
-									<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
-								</div>
-								<div class="item-product__body">
-									<h3 class="item-product__title">
-										<a href="#">
-											Футболка
-											<span>Drohnenwaffe Oversize</span>
-										</a>
-									</h3>
-									<div class="item-product__price">1 250 ₴</div>
-								</div>
-							</article>
-							<article class="item-product">
-								<div class="item-product__image">
-									<a href="#"></a>
-									<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-									<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
-									<div class="item-product__header">
-										<div class="separator"></div>
-										<!-- _icon-heart-fill -->
-										<div class="item-product__fav fav-btn _icon-heart"></div>
-									</div>
-									<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
-								</div>
-								<div class="item-product__body">
-									<h3 class="item-product__title">
-										<a href="#">
-											Футболка
-											<span>Drohnenwaffe Oversize</span>
-										</a>
-									</h3>
-									<div class="item-product__price">1 250 ₴</div>
-								</div>
-							</article>
-							<article class="item-product">
-								<div class="item-product__image">
-									<a href="#"></a>
-									<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-									<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
-									<div class="item-product__header">
-										<div class="separator"></div>
-										<!-- _icon-heart-fill -->
-										<div class="item-product__fav fav-btn _icon-heart"></div>
-									</div>
-									<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
-								</div>
-								<div class="item-product__body">
-									<h3 class="item-product__title">
-										<a href="#">
-											Футболка
-											<span>Drohnenwaffe Oversize</span>
-										</a>
-									</h3>
-									<div class="item-product__price">1 250 ₴</div>
-								</div>
-							</article>
-							<article class="item-product">
-								<div class="item-product__image">
-									<a href="#"></a>
-									<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-									<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
-									<div class="item-product__header">
-										<div class="separator"></div>
-										<!-- _icon-heart-fill -->
-										<div class="item-product__fav fav-btn _icon-heart"></div>
-									</div>
-									<div class="item-product__cart-label button button--white _icon-plus">додати у кошик</div>
-								</div>
-								<div class="item-product__body">
-									<h3 class="item-product__title">
-										<a href="#">
-											Футболка
-											<span>Drohnenwaffe Oversize</span>
-										</a>
-									</h3>
-									<div class="item-product__price">1 250 ₴</div>
-								</div>
-							</article>
-						</div>
-						<div class="catalog__footer">
-							<button class="catalog__more button button--border">Показати ще</button>
-							<ul class="catalog__pagination pagination">
-								<li>
-									<a class="--active" href="#">1</a>
-								</li>
-								<li>
-									<a href="#">2</a>
-								</li>
-								<li>
-									<a href="#">3</a>
-								</li>
-								<li>
-									<a href="#">4</a>
-								</li>
-								<li>
-									<a href="#">￫</a>
-								</li>
-								<li>
-									<a href="#">￫￫</a>
-								</li>
-							</ul>
-						</div>
+							</div>
+						</form>
 					</div>
 				</section>
-				<div class="page__mission mission-section">
-					<div class="mission-section__container">
-						<div class="mission-section__body">
-							<div class="mission-section__image">
-								<img class="ibg" alt="Image" src="./assets/img/home/mission/bg.webp">
-							</div>
-							<div class="mission-section__content">
-								<div class="mission-section__icon">
-									<img src="./assets/img/home/mission/logo.svg" alt="Image">
-								</div>
-								<p class="mission-section__text">
-									Наша мета - підвищувати якість життя наших споживачів щодня, пропонуючи їм більш якісний та доступний
-            одяг,
-            заохочуючи та підтримуючи здоровий спосіб життя та фундаментальні європейські цінності.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__top">
