@@ -6,8 +6,8 @@
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Профіль</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1755111718515"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755111718515">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1755700027048"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755700027048">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -177,7 +177,7 @@
 					</div>
 					<div class="separator"></div>
 					<div class="header__actions">
-						<button data-fls-dynamic=".header__container, 1199.98, 1" class="header__action-btn _icon-search"></button>
+						<button data-search-toggle="" data-fls-dynamic=".header__container, 1199.98, 1" class="header__action-btn _icon-search"></button>
 						<button class="header__action-btn _icon-user"></button>
 						<button class="header__action-btn _icon-heart"></button>
 						<div class="header__cart" data-fls-dynamic=".header__settings, 1199.98, last">
@@ -327,6 +327,10 @@
 						</div>
 					</div>
 				</div>
+				<div class="header__search _icon-search">
+					<input type="text" name="search" placeholder="Я шукаю...">
+					<button data-search-toggle="" class="_icon-cross"></button>
+				</div>
 			</header>
 			<div class="pc-menu">
 				<button data-fls-menu="" class="pc-menu__close _icon-cross"></button>
@@ -372,9 +376,14 @@
 				<button data-fls-menu="" class="mobile-menu__close _icon-cross"></button>
 				<button class="mobile-menu__catalog-btn button button--red">
 					<span>Каталог товарів</span>
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
-						<path d="M1 1H15M15 1V15M15 1L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
-					</svg>
+					<div class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none" class="no-hover">
+							<path d="M1 1H15M15 1V15M15 1L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" class="hover" width="16" height="16" viewbox="0 0 16 16" fill="none">
+							<path d="M1 1L8 8M8 8L15 15M8 8L14.9999 1.00006L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
+						</svg>
+					</div>
 				</button>
 				<div class="mobile-menu__actions">
 					<a href="#" class="mobile-menu__actions-item _icon-user">
@@ -423,9 +432,14 @@
 									</div>
 									<button class="auth-popup__button button">
 										<span>Увійти</span>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
-											<path d="M1 1.64142H15M15 1.64142V15.6414M15 1.64142L1 15.6414" stroke="var(--color, #FFF)" stroke-width="2"></path>
-										</svg>
+										<div class="icon">
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none" class="no-hover">
+												<path d="M1 1H15M15 1V15M15 1L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
+											</svg>
+											<svg xmlns="http://www.w3.org/2000/svg" class="hover" width="16" height="16" viewbox="0 0 16 16" fill="none">
+												<path d="M1 1L8 8M8 8L15 15M8 8L14.9999 1.00006L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
+											</svg>
+										</div>
 									</button>
 								</form>
 							</div>
@@ -474,9 +488,14 @@
 									</div>
 									<button class="auth-popup__button button">
 										<span>ЗАРЕЄСТРУВАТИСЯ</span>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
-											<path d="M1 1.64142H15M15 1.64142V15.6414M15 1.64142L1 15.6414" stroke="var(--color, #FFF)" stroke-width="2"></path>
-										</svg>
+										<div class="icon">
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none" class="no-hover">
+												<path d="M1 1H15M15 1V15M15 1L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
+											</svg>
+											<svg xmlns="http://www.w3.org/2000/svg" class="hover" width="16" height="16" viewbox="0 0 16 16" fill="none">
+												<path d="M1 1L8 8M8 8L15 15M8 8L14.9999 1.00006L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
+											</svg>
+										</div>
 									</button>
 								</form>
 							</div>
@@ -584,6 +603,111 @@
 						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
 						<div class="sizes-popup">
 							<img alt="Image" class="sizes-popup__image" src="./assets/img/sizes.webp">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="refund-popup" aria-hidden="true" class="popup popup--refund">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
+						<div class="refund-popup">
+							<h4 class="refund-popup__title">Оформлення повернення</h4>
+							<div class="refund-popup__subtitle">Заповніть всю необхідну інформацію щоб ми змогли вам допомогти</div>
+							<div class="refund-popup__block">
+								<div class="refund-popup__field refund-popup__field--fill field">
+									<div class="field__label">Виберіть замовлення із списку</div>
+									<select name="order" data-fls-select="">
+										<option value="1" selected>футболка Tactical beard club</option>
+										<option value="2">футболка Tactical beard club</option>
+										<option value="3">футболка Tactical beard club</option>
+										<option value="4">футболка Tactical beard club</option>
+									</select>
+								</div>
+								<div class="refund-popup__field field">
+									<div class="field__label">Ваше ім’я</div>
+									<input type="text" name="firstName" class="field__input">
+								</div>
+								<div class="refund-popup__field field">
+									<div class="field__label">Прізвище</div>
+									<input type="text" name="lastName" class="field__input">
+								</div>
+								<div class="refund-popup__field field">
+									<div class="field__label">Email</div>
+									<input type="email" name="email" class="field__input">
+								</div>
+								<div class="refund-popup__field field">
+									<div class="field__label">Телефон</div>
+									<input type="text" name="phone" class="field__input">
+								</div>
+							</div>
+							<div class="refund-popup__block">
+								<div class="refund-popup__field field">
+									<div class="field__label">Щоб ви хотіли отримати:</div>
+									<label class="field__radiobox radiobox">
+										<div class="radiobox__icon"></div>
+										<input type="radio" checked name="refundWay">
+										Я хочу повернути гроші
+									</label>
+									<label class="field__radiobox radiobox">
+										<div class="radiobox__icon"></div>
+										<input type="radio" name="refundWay">
+										Я хочу заміну товару
+									</label>
+								</div>
+								<div class="refund-popup__field field">
+									<div class="field__label">Карта для повернення грошей:</div>
+									<input type="text" name="cardNumber" class="field__input">
+								</div>
+								<div class="refund-popup__field field">
+									<div class="field__label">Причина:</div>
+									<label class="field__radiobox radiobox">
+										<div class="radiobox__icon"></div>
+										<input type="radio" checked name="refundWay">
+										Мені не сподобався товар
+									</label>
+									<label class="field__radiobox radiobox">
+										<div class="radiobox__icon"></div>
+										<input type="radio" name="refundWay">
+										Товар має брак/не якісний
+									</label>
+								</div>
+								<div class="refund-popup__warn">
+									<p>
+										Зверніть увагу, що повернути кошти чи зробити заміну товару можливо тільки протягом
+										<b>14 днів</b>
+										з
+							моменту
+							отримання товару
+									</p>
+								</div>
+							</div>
+							<div class="refund-popup__block">
+								<div class="refund-popup__field refund-popup__field--fill field">
+									<div class="field__label">Коментар:</div>
+									<textarea name="comment" class="field__textarea"></textarea>
+								</div>
+							</div>
+							<div class="refund-popup__footer">
+								<button class="refund-popup__button button button--black-border">НАЗАД</button>
+								<button class="refund-popup__button button button--border">ЗБЕРЕГТИ</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="logout-popup" aria-hidden="true" class="popup popup--logout">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close _icon-cross"></button>
+						<div class="logout-popup">
+							<img src="./assets/img/home/mission/logo.svg" alt="Image" class="logout-popup__logo">
+							<h3 class="logout-popup__title">Вийти із акаунту</h3>
+							<div class="logout-popup__label">Ви дійсно хочети вийти?</div>
+							<div class="logout-popup__footer">
+								<button class="logout-popup__button button button--black-border">ЗАЛИШИТИСЬ</button>
+								<button class="logout-popup__button button button--border">ВИЙТИ</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -757,8 +881,10 @@
 										<article class="item-product">
 											<div class="item-product__image">
 												<a href="#"></a>
-												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__pic">
+													<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+													<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												</div>
 												<div class="item-product__header">
 													<div class="item-product__tag item-product__tag--green">Тепер в наявності</div>
 													<div class="separator"></div>
@@ -779,8 +905,10 @@
 										<article class="item-product --disabled">
 											<div class="item-product__image">
 												<a href="#"></a>
-												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__pic">
+													<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+													<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												</div>
 												<div class="item-product__header">
 													<div class="item-product__tag item-product__tag--black">Тепер в наявності</div>
 													<div class="separator"></div>
@@ -801,8 +929,10 @@
 										<article class="item-product --disabled">
 											<div class="item-product__image">
 												<a href="#"></a>
-												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__pic">
+													<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+													<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												</div>
 												<div class="item-product__header">
 													<div class="item-product__tag item-product__tag--black">Тепер в наявності</div>
 													<div class="separator"></div>
@@ -823,8 +953,10 @@
 										<article class="item-product --disabled">
 											<div class="item-product__image">
 												<a href="#"></a>
-												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__pic">
+													<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+													<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												</div>
 												<div class="item-product__header">
 													<div class="item-product__tag item-product__tag--black">Тепер в наявності</div>
 													<div class="separator"></div>
@@ -845,8 +977,10 @@
 										<article class="item-product --disabled">
 											<div class="item-product__image">
 												<a href="#"></a>
-												<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
-												<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												<div class="item-product__pic">
+													<img class="ibg" alt="Image" src="./assets/img/products/01.webp">
+													<img class="ibg hover" alt="Image" src="./assets/img/products/05.webp">
+												</div>
 												<div class="item-product__header">
 													<div class="item-product__tag item-product__tag--black">Тепер в наявності</div>
 													<div class="separator"></div>

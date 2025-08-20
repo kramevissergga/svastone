@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Профіль</title>
+		<title>Доставка і оплата</title>
 		<script type="module" crossorigin="" src="./js/app.min.js?v=1755700027048"></script>
 		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755700027048">
 	</head>
@@ -713,261 +713,97 @@
 				</div>
 			</div>
 			<main class="page">
-				<div class="page__profile profile">
-					<div class="profile__container">
-						<div class="profile__breadcrumbs breadcrumbs">
+				<section class="page__info-page info-page">
+					<div class="info-page__container">
+						<div class="info-page__breadcrumbs breadcrumbs">
 							<ul>
 								<li>
 									<a href="#">Головна</a>
 								</li>
 								<li>
-									<a href="#">Кабінет</a>
+									<a href="#">Доставка і оплата</a>
 								</li>
 							</ul>
 						</div>
-						<h1 class="profile__title">Андрій Х.</h1>
-						<div class="profile__wrapper">
-							<div data-fls-spoilers="767.98, max" class="profile__aside">
-								<details>
-									<summary>
-										Особистий кабінет
-										<div class="plus-icon"></div>
-									</summary>
-									<!-- , , -->
-									<div class="profile__menu">
-										<a href="profile-edit.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#user"></use>
-												</svg>
-											</div>
-											<span>Редагувати обліковий запис</span>
-										</a>
-										<a href="profile-pass.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#pass"></use>
-												</svg>
-											</div>
-											<span>Змінити пароль</span>
-										</a>
-										<a href="profile-addresses.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
-												</svg>
-											</div>
-											<span>Aдресна книга</span>
-										</a>
-										<a href="profile-addresses-add.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
-												</svg>
-											</div>
-											<span>Додати адресу</span>
-										</a>
-										<a href="profile-wishlist.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
-												</svg>
-											</div>
-											<span>список бажаних товарів</span>
-										</a>
-										<a href="profile-wishlist-edit.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
-												</svg>
-											</div>
-											<span>список бажаних товарів (вибрати)</span>
-										</a>
-										<a href="profile-news.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#news"></use>
-												</svg>
-											</div>
-											<span>розсилка новин</span>
-										</a>
-										<a href="profile-wait.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#wait"></use>
-												</svg>
-											</div>
-											<span>товари, які я очікую</span>
-										</a>
-										<a href="profile-history.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#history"></use>
-												</svg>
-											</div>
-											<span>історія замовлень</span>
-										</a>
-										<a href="profile-downloads.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#download"></use>
-												</svg>
-											</div>
-											<span>завантаження</span>
-										</a>
-										<a href="profile-bonuses.html" class="profile__menu-item --active">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#gem"></use>
-												</svg>
-											</div>
-											<span>Бонусні бали</span>
-										</a>
-										<a href="profile-refund.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#back"></use>
-												</svg>
-											</div>
-											<span>Запити на повернення</span>
-										</a>
-										<a href="profile-payments.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#menu"></use>
-												</svg>
-											</div>
-											<span>Транзакції</span>
-										</a>
-										<a href="profile-sub.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#plus"></use>
-												</svg>
-											</div>
-											<span>Регулярні платежі</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#logout"></use>
-												</svg>
-											</div>
-											<span>Вийти</span>
-										</a>
-									</div>
-								</details>
+						<h1 class="info-page__title">Доставка і оплата</h1>
+						<div class="info-page__body">
+							<div class="info-page__block">
+								<div class="info-page__text text">
+									<h2>Доставка</h2>
+									<p></p>
+									<p>
+										Щоб оформити замовлення, додайте товар, який сподобався, у кошик та заповніть форму.
+									</p>
+									<p>
+										Термін обробки Вашого замовлення на сайті –
+										<b>1 день. Термін відправки до 3 робочих днів.</b>
+									</p>
+									<p>
+										Усі товари в нашому інтернет-магазині продаються з доставкою
+										<b>Новою Поштою</b>
+										. Всі замовлення за межі
+              України
+              відправляємо після повної оплати вартості товару та доставки (за тарифами УкрПошти)!
+									</p>
+									<p>
+										Ви можете оплатити свій товар готівкою на Новій Пошті або за передоплатою на банківську картку.
+									</p>
+									<p></p>
+								</div>
 							</div>
-							<div class="profile__body">
-								<div class="profile__fields-block profile__fields-block--big fields-block">
-									<h3 class="fields-block__title">Бонусні бали</h3>
-									<div class="fields-block__bonuses bonuses-profile">
-										<div class="bonuses-profile__header">
-											<h4 class="bonuses-profile__title">Загальна кількість Ваших бонусних балів</h4>
-											<div class="bonuses-profile__count">53</div>
-										</div>
-										<div data-fls-showmore="items" class="bonuses-profile__table">
-											<div class="bonuses-profile__head">
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label">Дата додавання</div>
-													<div class="bonuses-profile__label">Опис</div>
-													<div class="bonuses-profile__label">Бали</div>
-												</div>
-											</div>
-											<div data-fls-showmore-content="7" class="bonuses-profile__body">
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-											</div>
-											<button hidden data-fls-showmore-button="" type="button" class="bonuses-profile__more">
-												<span>Показати
-          всі</span>
-												<span>Сховати</span>
-											</button>
-										</div>
-									</div>
+							<div class="info-page__block">
+								<div class="info-page__text text">
+									<h2>Оплата</h2>
+									<ul>
+										<li>Накладна плата (з тарифами Нової Пошти)</li>
+										<li>За допомогою Приват24</li>
+										<li>Оплата пластиковою карткою (Visa, Mastercard) on-line.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="info-page__block">
+								<div class="info-page__text text">
+									<h2>Повернення</h2>
+									<p>
+										Ви зробили замовлення на нашому сайті, отримали його і виявили, що воно з якоїсь причини вас не влаштовує?
+              Не поспішайте засмучуватися: будь-яку проблему можна вирішити. Вам допоможе послуга "повернення товару",
+              яку
+              ми постаралися зробити максимально швидкою і простою для вас!
+									</p>
+									<br>
+									<p>
+										<b>Загальні умови для оформлення повернення:</b>
+									</p>
+									<p>
+										Повернення товару ви зможете здійснити протягом
+										<b>14 днів з моменту отримання</b>
+										. Будь ласка, зверніть
+              увагу, що
+              речі, які вже носили чи прали, або вироби, де була відірвана етикетка, магазин прийняти не зможе! Тому
+              завжди перевіряйте своє замовлення. Переконайтеся, що вам доставили саме те, що ви замовляли. Якщо
+              зовнішній
+              вигляд товару вам не сподобався, ви можете відразу ж відмовитися від покупки - погодьтеся, це в будь-якому
+              випадку простіше, ніж потім повертати замовлення самостійно. Однак, якщо ви виявили брак або сталася
+              помилка
+              при оформленні замовлення (ви отримали не той товар), будь ласка, не турбуйтеся, ми здійснимо обмін або
+              повернення товару за свій рахунок.
+									</p>
+									<p>
+										Терміни отримання повернення та оплати, на жаль, залежать не тільки від нас. Кур'єрській службі та банкам
+              також знадобиться час на пересилку товару і грошових коштів, тому час отримання нами повернення і термін
+              повернення оплати може варіюватися. Зі свого боку, ми зробимо все можливе, щоб прискорити цей процес. Якщо
+              ви не забрали своє замовлення з відділення «нової пошти» протягом 5 робочих днів він автоматично буде
+              повернуто в магазин!
+									</p>
+									<p>
+										З усіх питань, пов'язаних з поверненнями, ви зможете зв'язатися з нами будь-яким зручним для вас способом.
+              Ми завжди раді допомогти вам!
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__top">

@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Профіль</title>
+		<title>Контакти</title>
 		<script type="module" crossorigin="" src="./js/app.min.js?v=1755700027048"></script>
 		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755700027048">
 	</head>
@@ -712,262 +712,309 @@
 					</div>
 				</div>
 			</div>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC19klcOAZ-QCCGQt3iPzBxIYvoa-VMh5g"></script>
 			<main class="page">
-				<div class="page__profile profile">
-					<div class="profile__container">
-						<div class="profile__breadcrumbs breadcrumbs">
+				<section class="page__contacts contacts">
+					<div class="contacts__container">
+						<div class="contacts__breadcrumbs breadcrumbs">
 							<ul>
 								<li>
 									<a href="#">Головна</a>
 								</li>
 								<li>
-									<a href="#">Кабінет</a>
+									<a href="#">Контакти</a>
 								</li>
 							</ul>
 						</div>
-						<h1 class="profile__title">Андрій Х.</h1>
-						<div class="profile__wrapper">
-							<div data-fls-spoilers="767.98, max" class="profile__aside">
-								<details>
-									<summary>
-										Особистий кабінет
+						<h1 class="contacts__title">Контакти</h1>
+						<div class="contacts__wrapper">
+							<div data-fls-spoilers="" data-fls-spoilers-one="" class="contacts__spoilers">
+								<details data-fls-spoilers-open="" data-map-coords="48.44066713741661, 22.70693766469508" data-map-image="assets/img/news/01.png" data-map-label="Вул. Фортечна, 3b (Набережна магістраль)" data-map-active="" class="contacts__sp-item">
+									<summary class="contacts__sp-title">
+										<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M25.996 15.0199L16.5087 5.53145L18.5292 3.51314L15.0181 0L5.53077 9.48846L3.51271 7.46533L0 10.9785L9.48729 20.4669L7.46682 22.4869L10.9795 26L20.4668 16.5115L22.4873 18.5323L26 15.0191L25.996 15.0199ZM12.9976 16.9498L9.04589 12.9968L12.9976 9.0446L16.9501 12.9968L12.9976 16.9498Z" fill="#E2102E"></path>
+										</svg>
+										<span>м. Київ</span>
 										<div class="plus-icon"></div>
 									</summary>
-									<!-- , , -->
-									<div class="profile__menu">
-										<a href="profile-edit.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#user"></use>
+									<div class="contacts__sp-body">
+										<div class="contacts__light-label">Адреса</div>
+										<div class="contacts__label">Вул. Фортечна, 2b (Набережна магістраль)</div>
+										<div class="contacts__bold-label">Відправимо 19 липня</div>
+										<div class="contacts__price">100 ₴</div>
+										<div class="contacts__cols">
+											<div class="contacts__col">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+													<path d="M2.875 1.02051C3.61223 0.24435 4.88182 0.3371 5.5625 1.2998L6.96289 3.28125C7.51826 4.06679 7.44601 5.12721 6.83496 5.77051L6.51562 6.10547L6.79199 6.36816C6.5158 6.10597 6.51508 6.10599 6.51465 6.10645L6.51367 6.10742L6.51172 6.11035C6.51053 6.11164 6.50911 6.11283 6.50781 6.11426L6.47363 6.15527C6.45583 6.17779 6.43469 6.2069 6.41211 6.24219C6.36669 6.31321 6.31477 6.40982 6.27051 6.53418C6.18079 6.78631 6.1261 7.13546 6.19238 7.58789C6.3234 8.48211 6.92179 9.75422 8.59668 11.5176C10.2685 13.2777 11.4841 13.9174 12.3535 14.0586C12.7958 14.1303 13.1401 14.0711 13.3896 13.9727C13.5123 13.9242 13.6077 13.8683 13.6768 13.8193C13.7112 13.7949 13.739 13.772 13.7607 13.7529C13.7716 13.7434 13.7812 13.7351 13.7891 13.7275C13.7928 13.7239 13.7957 13.7199 13.7988 13.7168L13.8066 13.709C13.8071 13.7085 13.8078 13.7076 13.4453 13.3633L13.8076 13.708L14.3135 13.1748C14.8502 12.6097 15.6869 12.4889 16.3867 12.8916L18.5098 14.1133C19.6023 14.7421 19.8297 16.2863 18.9951 17.165L17.416 18.8271C17.0696 19.1918 16.6759 19.4206 16.2578 19.4619C14.5768 19.6278 10.3096 19.4674 5.71289 14.6279C1.34914 10.0336 0.597047 6.13292 0.50293 4.37988C0.472979 3.82193 0.71724 3.29193 1.13086 2.85645L2.875 1.02051Z" stroke="var(--color, #999999)"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Телефони</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+												</div>
 											</div>
-											<span>Редагувати обліковий запис</span>
-										</a>
-										<a href="profile-pass.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#pass"></use>
+											<div class="contacts__col">
+												<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+													<path d="M10.5 5.44444V11L13.2778 9.33333M20.5 11C20.5 16.5229 16.0229 21 10.5 21C4.97716 21 0.5 16.5229 0.5 11C0.5 5.47716 4.97716 1 10.5 1C16.0229 1 20.5 5.47716 20.5 11Z" stroke="var(--color, #999999)" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Графік роботи</div>
+													<div class="contacts__label">Пн-пт 8:00-20:00</div>
+													<div class="contacts__label">Сб-Нд 8:00-20:00</div>
+												</div>
 											</div>
-											<span>Змінити пароль</span>
-										</a>
-										<a href="profile-addresses.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
+										</div>
+									</div>
+								</details>
+								<details data-map-coords="48.44513607036694, 22.737526159945297" data-map-image="assets/img/news/02.png" data-map-label="Вул. Фортечна, 4b (Набережна магістраль)" class="contacts__sp-item">
+									<summary class="contacts__sp-title">
+										<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M25.996 15.0199L16.5087 5.53145L18.5292 3.51314L15.0181 0L5.53077 9.48846L3.51271 7.46533L0 10.9785L9.48729 20.4669L7.46682 22.4869L10.9795 26L20.4668 16.5115L22.4873 18.5323L26 15.0191L25.996 15.0199ZM12.9976 16.9498L9.04589 12.9968L12.9976 9.0446L16.9501 12.9968L12.9976 16.9498Z" fill="#E2102E"></path>
+										</svg>
+										<span>м. Харків</span>
+										<div class="plus-icon"></div>
+									</summary>
+									<div class="contacts__sp-body">
+										<div class="contacts__light-label">Адреса</div>
+										<div class="contacts__label">Вул. Фортечна, 2b (Набережна магістраль)</div>
+										<div class="contacts__bold-label">Відправимо 19 липня</div>
+										<div class="contacts__price">100 ₴</div>
+										<div class="contacts__items">
+											<div class="contacts__item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+													<path d="M2.875 1.02051C3.61223 0.24435 4.88182 0.3371 5.5625 1.2998L6.96289 3.28125C7.51826 4.06679 7.44601 5.12721 6.83496 5.77051L6.51562 6.10547L6.79199 6.36816C6.5158 6.10597 6.51508 6.10599 6.51465 6.10645L6.51367 6.10742L6.51172 6.11035C6.51053 6.11164 6.50911 6.11283 6.50781 6.11426L6.47363 6.15527C6.45583 6.17779 6.43469 6.2069 6.41211 6.24219C6.36669 6.31321 6.31477 6.40982 6.27051 6.53418C6.18079 6.78631 6.1261 7.13546 6.19238 7.58789C6.3234 8.48211 6.92179 9.75422 8.59668 11.5176C10.2685 13.2777 11.4841 13.9174 12.3535 14.0586C12.7958 14.1303 13.1401 14.0711 13.3896 13.9727C13.5123 13.9242 13.6077 13.8683 13.6768 13.8193C13.7112 13.7949 13.739 13.772 13.7607 13.7529C13.7716 13.7434 13.7812 13.7351 13.7891 13.7275C13.7928 13.7239 13.7957 13.7199 13.7988 13.7168L13.8066 13.709C13.8071 13.7085 13.8078 13.7076 13.4453 13.3633L13.8076 13.708L14.3135 13.1748C14.8502 12.6097 15.6869 12.4889 16.3867 12.8916L18.5098 14.1133C19.6023 14.7421 19.8297 16.2863 18.9951 17.165L17.416 18.8271C17.0696 19.1918 16.6759 19.4206 16.2578 19.4619C14.5768 19.6278 10.3096 19.4674 5.71289 14.6279C1.34914 10.0336 0.597047 6.13292 0.50293 4.37988C0.472979 3.82193 0.71724 3.29193 1.13086 2.85645L2.875 1.02051Z" stroke="var(--color, #999999)"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Телефони</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+												</div>
 											</div>
-											<span>Aдресна книга</span>
-										</a>
-										<a href="profile-addresses-add.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
+											<div class="contacts__item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+													<path d="M10.5 5.44444V11L13.2778 9.33333M20.5 11C20.5 16.5229 16.0229 21 10.5 21C4.97716 21 0.5 16.5229 0.5 11C0.5 5.47716 4.97716 1 10.5 1C16.0229 1 20.5 5.47716 20.5 11Z" stroke="var(--color, #999999)" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Графік роботи</div>
+													<div class="contacts__label">Пн-пт 8:00-20:00</div>
+													<div class="contacts__label">Сб-Нд 8:00-20:00</div>
+												</div>
 											</div>
-											<span>Додати адресу</span>
-										</a>
-										<a href="profile-wishlist.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
+										</div>
+									</div>
+								</details>
+								<details data-map-coords="48.44908128796207, 22.698319477541247" data-map-image="assets/img/news/03.png" data-map-label="Вул. Фортечна, 5b (Набережна магістраль)" class="contacts__sp-item">
+									<summary class="contacts__sp-title">
+										<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M25.996 15.0199L16.5087 5.53145L18.5292 3.51314L15.0181 0L5.53077 9.48846L3.51271 7.46533L0 10.9785L9.48729 20.4669L7.46682 22.4869L10.9795 26L20.4668 16.5115L22.4873 18.5323L26 15.0191L25.996 15.0199ZM12.9976 16.9498L9.04589 12.9968L12.9976 9.0446L16.9501 12.9968L12.9976 16.9498Z" fill="#E2102E"></path>
+										</svg>
+										<span>м. Дніпро</span>
+										<div class="plus-icon"></div>
+									</summary>
+									<div class="contacts__sp-body">
+										<div class="contacts__light-label">Адреса</div>
+										<div class="contacts__label">Вул. Фортечна, 2b (Набережна магістраль)</div>
+										<div class="contacts__bold-label">Відправимо 19 липня</div>
+										<div class="contacts__price">100 ₴</div>
+										<div class="contacts__items">
+											<div class="contacts__item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+													<path d="M2.875 1.02051C3.61223 0.24435 4.88182 0.3371 5.5625 1.2998L6.96289 3.28125C7.51826 4.06679 7.44601 5.12721 6.83496 5.77051L6.51562 6.10547L6.79199 6.36816C6.5158 6.10597 6.51508 6.10599 6.51465 6.10645L6.51367 6.10742L6.51172 6.11035C6.51053 6.11164 6.50911 6.11283 6.50781 6.11426L6.47363 6.15527C6.45583 6.17779 6.43469 6.2069 6.41211 6.24219C6.36669 6.31321 6.31477 6.40982 6.27051 6.53418C6.18079 6.78631 6.1261 7.13546 6.19238 7.58789C6.3234 8.48211 6.92179 9.75422 8.59668 11.5176C10.2685 13.2777 11.4841 13.9174 12.3535 14.0586C12.7958 14.1303 13.1401 14.0711 13.3896 13.9727C13.5123 13.9242 13.6077 13.8683 13.6768 13.8193C13.7112 13.7949 13.739 13.772 13.7607 13.7529C13.7716 13.7434 13.7812 13.7351 13.7891 13.7275C13.7928 13.7239 13.7957 13.7199 13.7988 13.7168L13.8066 13.709C13.8071 13.7085 13.8078 13.7076 13.4453 13.3633L13.8076 13.708L14.3135 13.1748C14.8502 12.6097 15.6869 12.4889 16.3867 12.8916L18.5098 14.1133C19.6023 14.7421 19.8297 16.2863 18.9951 17.165L17.416 18.8271C17.0696 19.1918 16.6759 19.4206 16.2578 19.4619C14.5768 19.6278 10.3096 19.4674 5.71289 14.6279C1.34914 10.0336 0.597047 6.13292 0.50293 4.37988C0.472979 3.82193 0.71724 3.29193 1.13086 2.85645L2.875 1.02051Z" stroke="var(--color, #999999)"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Телефони</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+												</div>
 											</div>
-											<span>список бажаних товарів</span>
-										</a>
-										<a href="profile-wishlist-edit.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
+											<div class="contacts__item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+													<path d="M10.5 5.44444V11L13.2778 9.33333M20.5 11C20.5 16.5229 16.0229 21 10.5 21C4.97716 21 0.5 16.5229 0.5 11C0.5 5.47716 4.97716 1 10.5 1C16.0229 1 20.5 5.47716 20.5 11Z" stroke="var(--color, #999999)" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Графік роботи</div>
+													<div class="contacts__label">Пн-пт 8:00-20:00</div>
+													<div class="contacts__label">Сб-Нд 8:00-20:00</div>
+												</div>
 											</div>
-											<span>список бажаних товарів (вибрати)</span>
-										</a>
-										<a href="profile-news.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#news"></use>
+										</div>
+									</div>
+								</details>
+								<details data-map-coords="48.41638309106182, 22.64563929127699" data-map-image="assets/img/news/04.png" data-map-label="Вул. Фортечна, 6b (Набережна магістраль)" class="contacts__sp-item">
+									<summary class="contacts__sp-title">
+										<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M25.996 15.0199L16.5087 5.53145L18.5292 3.51314L15.0181 0L5.53077 9.48846L3.51271 7.46533L0 10.9785L9.48729 20.4669L7.46682 22.4869L10.9795 26L20.4668 16.5115L22.4873 18.5323L26 15.0191L25.996 15.0199ZM12.9976 16.9498L9.04589 12.9968L12.9976 9.0446L16.9501 12.9968L12.9976 16.9498Z" fill="#E2102E"></path>
+										</svg>
+										<span>м. Суми</span>
+										<div class="plus-icon"></div>
+									</summary>
+									<div class="contacts__sp-body">
+										<div class="contacts__light-label">Адреса</div>
+										<div class="contacts__label">Вул. Фортечна, 2b (Набережна магістраль)</div>
+										<div class="contacts__bold-label">Відправимо 19 липня</div>
+										<div class="contacts__price">100 ₴</div>
+										<div class="contacts__items">
+											<div class="contacts__item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+													<path d="M2.875 1.02051C3.61223 0.24435 4.88182 0.3371 5.5625 1.2998L6.96289 3.28125C7.51826 4.06679 7.44601 5.12721 6.83496 5.77051L6.51562 6.10547L6.79199 6.36816C6.5158 6.10597 6.51508 6.10599 6.51465 6.10645L6.51367 6.10742L6.51172 6.11035C6.51053 6.11164 6.50911 6.11283 6.50781 6.11426L6.47363 6.15527C6.45583 6.17779 6.43469 6.2069 6.41211 6.24219C6.36669 6.31321 6.31477 6.40982 6.27051 6.53418C6.18079 6.78631 6.1261 7.13546 6.19238 7.58789C6.3234 8.48211 6.92179 9.75422 8.59668 11.5176C10.2685 13.2777 11.4841 13.9174 12.3535 14.0586C12.7958 14.1303 13.1401 14.0711 13.3896 13.9727C13.5123 13.9242 13.6077 13.8683 13.6768 13.8193C13.7112 13.7949 13.739 13.772 13.7607 13.7529C13.7716 13.7434 13.7812 13.7351 13.7891 13.7275C13.7928 13.7239 13.7957 13.7199 13.7988 13.7168L13.8066 13.709C13.8071 13.7085 13.8078 13.7076 13.4453 13.3633L13.8076 13.708L14.3135 13.1748C14.8502 12.6097 15.6869 12.4889 16.3867 12.8916L18.5098 14.1133C19.6023 14.7421 19.8297 16.2863 18.9951 17.165L17.416 18.8271C17.0696 19.1918 16.6759 19.4206 16.2578 19.4619C14.5768 19.6278 10.3096 19.4674 5.71289 14.6279C1.34914 10.0336 0.597047 6.13292 0.50293 4.37988C0.472979 3.82193 0.71724 3.29193 1.13086 2.85645L2.875 1.02051Z" stroke="var(--color, #999999)"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Телефони</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+												</div>
 											</div>
-											<span>розсилка новин</span>
-										</a>
-										<a href="profile-wait.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#wait"></use>
+											<div class="contacts__item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+													<path d="M10.5 5.44444V11L13.2778 9.33333M20.5 11C20.5 16.5229 16.0229 21 10.5 21C4.97716 21 0.5 16.5229 0.5 11C0.5 5.47716 4.97716 1 10.5 1C16.0229 1 20.5 5.47716 20.5 11Z" stroke="var(--color, #999999)" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Графік роботи</div>
+													<div class="contacts__label">Пн-пт 8:00-20:00</div>
+													<div class="contacts__label">Сб-Нд 8:00-20:00</div>
+												</div>
 											</div>
-											<span>товари, які я очікую</span>
-										</a>
-										<a href="profile-history.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#history"></use>
+										</div>
+									</div>
+								</details>
+								<details data-map-coords="48.40470006390648, 22.717255212696145" data-map-image="assets/img/news/01.png" data-map-label="Вул. Фортечна, 7b (Набережна магістраль)" class="contacts__sp-item">
+									<summary class="contacts__sp-title">
+										<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M25.996 15.0199L16.5087 5.53145L18.5292 3.51314L15.0181 0L5.53077 9.48846L3.51271 7.46533L0 10.9785L9.48729 20.4669L7.46682 22.4869L10.9795 26L20.4668 16.5115L22.4873 18.5323L26 15.0191L25.996 15.0199ZM12.9976 16.9498L9.04589 12.9968L12.9976 9.0446L16.9501 12.9968L12.9976 16.9498Z" fill="#E2102E"></path>
+										</svg>
+										<span>м. Тернопіль</span>
+										<div class="plus-icon"></div>
+									</summary>
+									<div class="contacts__sp-body">
+										<div class="contacts__light-label">Адреса</div>
+										<div class="contacts__label">Вул. Фортечна, 2b (Набережна магістраль)</div>
+										<div class="contacts__bold-label">Відправимо 19 липня</div>
+										<div class="contacts__price">100 ₴</div>
+										<div class="contacts__items">
+											<div class="contacts__item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+													<path d="M2.875 1.02051C3.61223 0.24435 4.88182 0.3371 5.5625 1.2998L6.96289 3.28125C7.51826 4.06679 7.44601 5.12721 6.83496 5.77051L6.51562 6.10547L6.79199 6.36816C6.5158 6.10597 6.51508 6.10599 6.51465 6.10645L6.51367 6.10742L6.51172 6.11035C6.51053 6.11164 6.50911 6.11283 6.50781 6.11426L6.47363 6.15527C6.45583 6.17779 6.43469 6.2069 6.41211 6.24219C6.36669 6.31321 6.31477 6.40982 6.27051 6.53418C6.18079 6.78631 6.1261 7.13546 6.19238 7.58789C6.3234 8.48211 6.92179 9.75422 8.59668 11.5176C10.2685 13.2777 11.4841 13.9174 12.3535 14.0586C12.7958 14.1303 13.1401 14.0711 13.3896 13.9727C13.5123 13.9242 13.6077 13.8683 13.6768 13.8193C13.7112 13.7949 13.739 13.772 13.7607 13.7529C13.7716 13.7434 13.7812 13.7351 13.7891 13.7275C13.7928 13.7239 13.7957 13.7199 13.7988 13.7168L13.8066 13.709C13.8071 13.7085 13.8078 13.7076 13.4453 13.3633L13.8076 13.708L14.3135 13.1748C14.8502 12.6097 15.6869 12.4889 16.3867 12.8916L18.5098 14.1133C19.6023 14.7421 19.8297 16.2863 18.9951 17.165L17.416 18.8271C17.0696 19.1918 16.6759 19.4206 16.2578 19.4619C14.5768 19.6278 10.3096 19.4674 5.71289 14.6279C1.34914 10.0336 0.597047 6.13292 0.50293 4.37988C0.472979 3.82193 0.71724 3.29193 1.13086 2.85645L2.875 1.02051Z" stroke="var(--color, #999999)"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Телефони</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+													<div class="contacts__label">
+														<a href="tel:380985162788">380985162788</a>
+													</div>
+												</div>
 											</div>
-											<span>історія замовлень</span>
-										</a>
-										<a href="profile-downloads.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#download"></use>
+											<div class="contacts__item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+													<path d="M10.5 5.44444V11L13.2778 9.33333M20.5 11C20.5 16.5229 16.0229 21 10.5 21C4.97716 21 0.5 16.5229 0.5 11C0.5 5.47716 4.97716 1 10.5 1C16.0229 1 20.5 5.47716 20.5 11Z" stroke="var(--color, #999999)" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg>
+												<div class="contacts__item-body">
+													<div class="contacts__light-label">Графік роботи</div>
+													<div class="contacts__label">Пн-пт 8:00-20:00</div>
+													<div class="contacts__label">Сб-Нд 8:00-20:00</div>
+												</div>
 											</div>
-											<span>завантаження</span>
-										</a>
-										<a href="profile-bonuses.html" class="profile__menu-item --active">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#gem"></use>
-												</svg>
-											</div>
-											<span>Бонусні бали</span>
-										</a>
-										<a href="profile-refund.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#back"></use>
-												</svg>
-											</div>
-											<span>Запити на повернення</span>
-										</a>
-										<a href="profile-payments.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#menu"></use>
-												</svg>
-											</div>
-											<span>Транзакції</span>
-										</a>
-										<a href="profile-sub.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#plus"></use>
-												</svg>
-											</div>
-											<span>Регулярні платежі</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#logout"></use>
-												</svg>
-											</div>
-											<span>Вийти</span>
-										</a>
+										</div>
 									</div>
 								</details>
 							</div>
-							<div class="profile__body">
-								<div class="profile__fields-block profile__fields-block--big fields-block">
-									<h3 class="fields-block__title">Бонусні бали</h3>
-									<div class="fields-block__bonuses bonuses-profile">
-										<div class="bonuses-profile__header">
-											<h4 class="bonuses-profile__title">Загальна кількість Ваших бонусних балів</h4>
-											<div class="bonuses-profile__count">53</div>
+							<div class="contacts__body">
+								<div class="contacts__map"></div>
+								<div class="contacts__map-info">
+									<div class="contacts__map-image"></div>
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__bottom">
+							<form action="#" class="contacts__form">
+								<h3 class="contacts__block-title">Форма зв’язку</h3>
+								<div class="contacts__field field">
+									<div class="field__label">Ваше ім'я</div>
+									<input type="text" name="name" class="field__input">
+								</div>
+								<div class="contacts__field field">
+									<div class="field__label">Email</div>
+									<input type="email" name="email" class="field__input">
+								</div>
+								<div class="contacts__field field">
+									<div class="field__label">Запит</div>
+									<textarea name="request" class="field__textarea"></textarea>
+								</div>
+								<div class="contacts__captcha-label">Скільки буде: 16 + 6?</div>
+								<div class="contacts__field field">
+									<div class="field__label">Відповідь на капчу</div>
+									<input name="captcha" class="field__input">
+								</div>
+								<button class="contacts__button button">
+									<span>Підтвердити</span>
+									<div class="icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none" class="no-hover">
+											<path d="M1 1H15M15 1V15M15 1L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
+										</svg>
+										<svg xmlns="http://www.w3.org/2000/svg" class="hover" width="16" height="16" viewbox="0 0 16 16" fill="none">
+											<path d="M1 1L8 8M8 8L15 15M8 8L14.9999 1.00006L1 15" stroke="var(--color, #FFF)" stroke-width="2"></path>
+										</svg>
+									</div>
+								</button>
+							</form>
+							<div class="contacts__eshop">
+								<h3 class="contacts__block-title">Інтернет-магазин</h3>
+								<div class="contacts__items">
+									<div class="contacts__item item-contacts">
+										<div class="item-contacts__label">Телефон</div>
+										<div class="item-contacts__text">
+											<a href="tel:380985162788">+380985162788</a>
 										</div>
-										<div data-fls-showmore="items" class="bonuses-profile__table">
-											<div class="bonuses-profile__head">
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label">Дата додавання</div>
-													<div class="bonuses-profile__label">Опис</div>
-													<div class="bonuses-profile__label">Бали</div>
-												</div>
-											</div>
-											<div data-fls-showmore-content="7" class="bonuses-profile__body">
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-											</div>
-											<button hidden data-fls-showmore-button="" type="button" class="bonuses-profile__more">
-												<span>Показати
-          всі</span>
-												<span>Сховати</span>
-											</button>
-										</div>
+										<ul class="item-contacts__social social">
+											<li>
+												<a href="#" class="_icon-s-inst"></a>
+											</li>
+											<li>
+												<a href="#" class="_icon-s-fb"></a>
+											</li>
+											<li>
+												<a href="#" class="_icon-s-yt"></a>
+											</li>
+											<li>
+												<a href="#" class="_icon-s-tg"></a>
+											</li>
+										</ul>
+									</div>
+									<div class="contacts__item item-contacts">
+										<div class="item-contacts__label">Розклад роботи</div>
+										<div class="item-contacts__text">з 11.00-19.00 ЩОДНЯ</div>
+									</div>
+									<div class="contacts__item item-contacts">
+										<div class="item-contacts__label">Ел. пошта</div>
+										<div class="item-contacts__text">info@svastone.com</div>
+									</div>
+									<div class="contacts__item item-contacts">
+										<div class="item-contacts__label">Відправка замовлень</div>
+										<div class="item-contacts__text">з 11:00 -19:00 СБ. НД ВИХІДНІ</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__top">

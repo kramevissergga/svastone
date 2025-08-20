@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Профіль</title>
+		<title>Питання-відповідь</title>
 		<script type="module" crossorigin="" src="./js/app.min.js?v=1755700027048"></script>
 		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755700027048">
 	</head>
@@ -713,261 +713,96 @@
 				</div>
 			</div>
 			<main class="page">
-				<div class="page__profile profile">
-					<div class="profile__container">
-						<div class="profile__breadcrumbs breadcrumbs">
+				<section class="page__info-page info-page">
+					<div class="info-page__container">
+						<div class="info-page__breadcrumbs breadcrumbs">
 							<ul>
 								<li>
 									<a href="#">Головна</a>
 								</li>
 								<li>
-									<a href="#">Кабінет</a>
+									<a href="#">Питання-Відповідь</a>
 								</li>
 							</ul>
 						</div>
-						<h1 class="profile__title">Андрій Х.</h1>
-						<div class="profile__wrapper">
-							<div data-fls-spoilers="767.98, max" class="profile__aside">
-								<details>
-									<summary>
-										Особистий кабінет
-										<div class="plus-icon"></div>
+						<h1 class="info-page__title">Питання-Відповідь</h1>
+						<div class="info-page__body">
+							<div data-fls-spoilers="" class="info-page__spoilers spoilers">
+								<details class="spoilers__item">
+									<summary class="spoilers__title">
+										Як підібрати потрібний розмір?
+										<span class="plus-icon"></span>
 									</summary>
-									<!-- , , -->
-									<div class="profile__menu">
-										<a href="profile-edit.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#user"></use>
-												</svg>
-											</div>
-											<span>Редагувати обліковий запис</span>
-										</a>
-										<a href="profile-pass.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#pass"></use>
-												</svg>
-											</div>
-											<span>Змінити пароль</span>
-										</a>
-										<a href="profile-addresses.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
-												</svg>
-											</div>
-											<span>Aдресна книга</span>
-										</a>
-										<a href="profile-addresses-add.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#location"></use>
-												</svg>
-											</div>
-											<span>Додати адресу</span>
-										</a>
-										<a href="profile-wishlist.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
-												</svg>
-											</div>
-											<span>список бажаних товарів</span>
-										</a>
-										<a href="profile-wishlist-edit.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#heart"></use>
-												</svg>
-											</div>
-											<span>список бажаних товарів (вибрати)</span>
-										</a>
-										<a href="profile-news.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#news"></use>
-												</svg>
-											</div>
-											<span>розсилка новин</span>
-										</a>
-										<a href="profile-wait.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#wait"></use>
-												</svg>
-											</div>
-											<span>товари, які я очікую</span>
-										</a>
-										<a href="profile-history.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#history"></use>
-												</svg>
-											</div>
-											<span>історія замовлень</span>
-										</a>
-										<a href="profile-downloads.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#download"></use>
-												</svg>
-											</div>
-											<span>завантаження</span>
-										</a>
-										<a href="profile-bonuses.html" class="profile__menu-item --active">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#gem"></use>
-												</svg>
-											</div>
-											<span>Бонусні бали</span>
-										</a>
-										<a href="profile-refund.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#back"></use>
-												</svg>
-											</div>
-											<span>Запити на повернення</span>
-										</a>
-										<a href="profile-payments.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#menu"></use>
-												</svg>
-											</div>
-											<span>Транзакції</span>
-										</a>
-										<a href="profile-sub.html" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#plus"></use>
-												</svg>
-											</div>
-											<span>Регулярні платежі</span>
-										</a>
-										<a href="#" class="profile__menu-item">
-											<div class="profile__menu-icon">
-												<svg>
-													<use xlink:href="./assets/img/profile-menu-icons.svg#logout"></use>
-												</svg>
-											</div>
-											<span>Вийти</span>
-										</a>
+									<div class="spoilers__body">
+										<div class="text">
+											<p>
+												Потрібний розмір ви можете підібрати, звірившись із розмірною сіткою, вона додана у фото до товарів
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spoilers__item">
+									<summary class="spoilers__title">
+										Я оформив замовлення. Що далі?
+										<span class="plus-icon"></span>
+									</summary>
+									<div class="spoilers__body">
+										<div class="text">
+											<p>
+												Після обробки вашого замовлення, на вказаний вами номер телефону прийде смс-повідомлення з реквізитами
+                  для оплати, або номер вашого відправлення (у випадку накладеного платежу)
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spoilers__item">
+									<summary class="spoilers__title">
+										Не приходить смс
+										<span class="plus-icon"></span>
+									</summary>
+									<div class="spoilers__body">
+										<div class="text">
+											<p>
+												Будь ласка, зателефонуйте за номером:
+												<b>0985162788</b>
+												або напишіть в телеграм на цей номер
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spoilers__item">
+									<summary class="spoilers__title">
+										Графік роботи
+										<span class="plus-icon"></span>
+									</summary>
+									<div class="spoilers__body">
+										<div class="text">
+											<p>Замовлення на сайті:</p>
+											<p>
+												<b>ПН-ПТ: З 10.00 ДО 19.00 СБ-НД: ВИХІДНИЙ</b>
+											</p>
+											<p>Фізичний магазин:</p>
+											<p>
+												<b>ЩОДНЯ з 11:00 до 19:00</b>
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spoilers__item">
+									<summary class="spoilers__title">
+										Чи є самовивіз?
+										<span class="plus-icon"></span>
+									</summary>
+									<div class="spoilers__body">
+										<div class="text">
+											<p>Так. Самовивіз в м.Київ вул.Турівська, 29</p>
+										</div>
 									</div>
 								</details>
 							</div>
-							<div class="profile__body">
-								<div class="profile__fields-block profile__fields-block--big fields-block">
-									<h3 class="fields-block__title">Бонусні бали</h3>
-									<div class="fields-block__bonuses bonuses-profile">
-										<div class="bonuses-profile__header">
-											<h4 class="bonuses-profile__title">Загальна кількість Ваших бонусних балів</h4>
-											<div class="bonuses-profile__count">53</div>
-										</div>
-										<div data-fls-showmore="items" class="bonuses-profile__table">
-											<div class="bonuses-profile__head">
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label">Дата додавання</div>
-													<div class="bonuses-profile__label">Опис</div>
-													<div class="bonuses-profile__label">Бали</div>
-												</div>
-											</div>
-											<div data-fls-showmore-content="7" class="bonuses-profile__body">
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-												<div class="bonuses-profile__row">
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Дата додавання</div>
-													<div class="bonuses-profile__label">11.07.2025</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Опис</div>
-													<div class="bonuses-profile__label bonuses-profile__label--thin">За замовлення на суму 2 000 ₴</div>
-													<div class="bonuses-profile__label bonuses-profile__label--mobile">Бали</div>
-													<div class="bonuses-profile__label bonuses-profile__label--bold">2</div>
-												</div>
-											</div>
-											<button hidden data-fls-showmore-button="" type="button" class="bonuses-profile__more">
-												<span>Показати
-          всі</span>
-												<span>Сховати</span>
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__top">

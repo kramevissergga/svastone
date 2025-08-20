@@ -2316,6 +2316,9 @@ document.addEventListener("click", (e) => {
       document.documentElement.removeAttribute("data-cart-open");
     }
   }
+  if (e.target.closest("[data-search-toggle]")) {
+    document.documentElement.toggleAttribute("data-search-open");
+  }
 });
 class DynamicAdapt {
   constructor() {
@@ -5224,7 +5227,9 @@ document.addEventListener("DOMContentLoaded", function() {
         destroy: true,
         breakpoints: {
           991.98: {
-            destroy: false
+            destroy: false,
+            padding: { right: 20 },
+            gap: 10
           }
         }
       });
@@ -5350,6 +5355,16 @@ function formRating() {
   }
 }
 document.querySelector("[data-fls-rating]") ? window.addEventListener("load", formRating) : null;
+function updateImageHeight() {
+  const bundleProducts = document.querySelector(".bundle-products");
+  const itemImage = bundleProducts == null ? void 0 : bundleProducts.querySelector(".item-product__image");
+  if (bundleProducts && itemImage) {
+    const imageHeight = itemImage.offsetHeight;
+    bundleProducts.style.setProperty("--item-image-height", `${imageHeight}px`);
+  }
+}
+document.addEventListener("DOMContentLoaded", updateImageHeight);
+window.addEventListener("resize", updateImageHeight);
 function tabs() {
   const tabs2 = document.querySelectorAll("[data-fls-tabs]");
   let tabsActiveHash = [];
@@ -5485,6 +5500,426 @@ function tabs() {
   }
 }
 window.addEventListener("load", tabs);
+let CustomMap$1 = class CustomMap {
+  constructor() {
+    this.map = null;
+    this.markers = [];
+    this.activeMarker = null;
+    if (typeof google === "undefined" || typeof google.maps === "undefined") {
+      console.error("Google Maps API не завантажено");
+      return;
+    }
+    this.init();
+  }
+  init() {
+    this.initMap();
+    this.bindEvents();
+    this.activateInitialMarker();
+  }
+  initMap() {
+    const mapContainer = document.querySelector(".contacts__map");
+    if (!mapContainer) {
+      console.error("Контейнер карти не знайдено");
+      return;
+    }
+    const defaultCenter = { lat: 48.3794, lng: 31.1656 };
+    this.map = new google.maps.Map(mapContainer, {
+      center: defaultCenter,
+      zoom: 6,
+      zoomControl: false,
+      fullscreenControl: false,
+      rotateControl: false,
+      scaleControl: false,
+      clickableIcons: false,
+      disableDefaultUI: true,
+      styles: [
+        {
+          featureType: "all",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              saturation: 36
+            },
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 40
+            }
+          ]
+        },
+        {
+          featureType: "all",
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              visibility: "on"
+            },
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 16
+            }
+          ]
+        },
+        {
+          featureType: "all",
+          elementType: "labels.icon",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "administrative",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 20
+            }
+          ]
+        },
+        {
+          featureType: "administrative",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 17
+            },
+            {
+              weight: 1.2
+            }
+          ]
+        },
+        {
+          featureType: "administrative",
+          elementType: "labels",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.country",
+          elementType: "all",
+          stylers: [
+            {
+              visibility: "simplified"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.country",
+          elementType: "geometry",
+          stylers: [
+            {
+              visibility: "simplified"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.country",
+          elementType: "labels.text",
+          stylers: [
+            {
+              visibility: "simplified"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.province",
+          elementType: "all",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.locality",
+          elementType: "all",
+          stylers: [
+            {
+              visibility: "simplified"
+            },
+            {
+              saturation: "-100"
+            },
+            {
+              lightness: "30"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.neighborhood",
+          elementType: "all",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.land_parcel",
+          elementType: "all",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "landscape",
+          elementType: "all",
+          stylers: [
+            {
+              visibility: "simplified"
+            },
+            {
+              gamma: "0.00"
+            },
+            {
+              lightness: "74"
+            }
+          ]
+        },
+        {
+          featureType: "landscape",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 20
+            }
+          ]
+        },
+        {
+          featureType: "landscape.man_made",
+          elementType: "all",
+          stylers: [
+            {
+              lightness: "3"
+            }
+          ]
+        },
+        {
+          featureType: "poi",
+          elementType: "all",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 21
+            }
+          ]
+        },
+        {
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [
+            {
+              visibility: "simplified"
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry",
+          stylers: [{ color: "#E2102E" }]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#E2102E" }]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#E2102E"
+            }
+          ]
+        },
+        {
+          featureType: "road.local",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 16
+            }
+          ]
+        },
+        {
+          featureType: "transit",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 19
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 17
+            }
+          ]
+        }
+      ],
+      // Порожня тема
+      mapTypeControl: false,
+      streetViewControl: false,
+      clickableIcons: false
+      // Вимкнути клікабельні іконки
+    });
+  }
+  createCustomMarker(coords, imageSrc, label) {
+    if (!this.map) return null;
+    const svgMarker = {
+      path: "M0.24875 33.75C0.24875 27.63 1.74875 21.99 4.74875 16.83C7.74875 11.67 11.8588 7.58999 17.0788 4.58999C22.2988 1.58999 27.9388 0.0599891 33.9987 -1.08711e-05C40.0588 -0.0600109 45.6987 1.46999 50.9188 4.58999C56.1387 7.70999 60.2487 11.79 63.2487 16.83C66.2487 21.87 67.7487 27.51 67.7487 33.75C67.7487 36.33 67.1187 39.33 65.8587 42.75C64.5987 46.17 63.0087 49.62 61.0887 53.1C59.1687 56.58 56.9787 60.12 54.5187 63.72C52.0587 67.32 49.6587 70.68 47.3187 73.8C44.9787 76.92 42.7887 79.68 40.7487 82.08C38.7087 84.48 37.0888 86.43 35.8888 87.93L33.9987 90C33.5187 89.52 32.8888 88.8 32.1088 87.84C31.3288 86.88 29.7388 84.99 27.3388 82.17C24.9388 79.35 22.7188 76.53 20.6788 73.71C18.6388 70.89 16.2688 67.59 13.5688 63.81C10.8688 60.03 8.64875 56.43 6.90875 53.01C5.16875 49.59 3.57875 46.2 2.13875 42.84C0.69875 39.48 0.06875 36.45 0.24875 33.75ZM11.4988 33.75C11.4988 39.99 13.6888 45.3 18.0688 49.68C22.4488 54.06 27.7588 56.25 33.9987 56.25C40.2388 56.25 45.5487 54.06 49.9287 49.68C54.3087 45.3 56.4987 39.99 56.4987 33.75C56.4987 27.51 54.3087 22.23 49.9287 17.91C45.5487 13.59 40.2388 11.37 33.9987 11.25C27.7588 11.13 22.4488 13.35 18.0688 17.91C13.6888 22.47 11.4988 27.75 11.4988 33.75Z",
+      fillColor: "#E2102E",
+      // Завжди червоний
+      fillOpacity: 1,
+      strokeWeight: 0,
+      rotation: 0,
+      scale: 0.6,
+      anchor: new google.maps.Point(12, 24)
+    };
+    const marker = new google.maps.Marker({
+      position: coords,
+      map: this.map,
+      icon: svgMarker,
+      title: label,
+      animation: null,
+      // Без анімації
+      clickable: false
+      // Не клікабельний
+    });
+    marker.customData = { imageSrc, label };
+    return marker;
+  }
+  bindEvents() {
+    const detailsElements = document.querySelectorAll(".contacts__sp-item");
+    detailsElements.forEach((detail) => {
+      detail.addEventListener("toggle", (event) => {
+        if (detail.open) {
+          this.handleDetailOpen(detail);
+        }
+      });
+    });
+    document.addEventListener("click", (event) => {
+      if (event.target.closest(".contacts__sp-item")) {
+        this.closeOtherDetails(event.target.closest(".contacts__sp-item"));
+      }
+    });
+  }
+  handleDetailOpen(detailElement) {
+    const coordsAttr = detailElement.getAttribute("data-map-coords");
+    const imageSrc = detailElement.getAttribute("data-map-image");
+    const label = detailElement.getAttribute("data-map-label");
+    if (!coordsAttr || !imageSrc || !label) {
+      console.error("Відсутні необхідні атрибути data");
+      return;
+    }
+    const [lat, lng] = coordsAttr.split(",").map((coord) => parseFloat(coord.trim()));
+    if (isNaN(lat) || isNaN(lng)) {
+      console.error("Невірні координати:", coordsAttr);
+      return;
+    }
+    const coords = { lat, lng };
+    this.updateMapInfo(imageSrc, label);
+    this.moveToCoords(coords);
+    this.addMarkerIfNotExists(coords, imageSrc, label, detailElement);
+    detailElement.setAttribute("data-map-active", "true");
+  }
+  updateMapInfo(imageSrc, label) {
+    const imageElement = document.querySelector(".contacts__map-image");
+    const labelElement = document.querySelector(".contacts__map-info span");
+    if (imageElement && imageSrc) {
+      imageElement.style.backgroundImage = `url('${imageSrc}')`;
+      imageElement.classList.add("loaded");
+    }
+    if (labelElement && label) {
+      labelElement.textContent = label;
+    }
+  }
+  moveToCoords(coords) {
+    if (!this.map) return;
+    this.map.panTo(coords);
+    this.map.setZoom(15);
+  }
+  addMarkerIfNotExists(coords, imageSrc, label, detailElement) {
+    const markerExists = this.markers.some((marker) => {
+      const pos = marker.getPosition();
+      return pos.lat() === coords.lat && pos.lng() === coords.lng;
+    });
+    if (!markerExists) {
+      const marker = this.createCustomMarker(coords, imageSrc, label);
+      if (marker) {
+        this.markers.push(marker);
+      }
+    }
+  }
+  closeOtherDetails(activeDetail) {
+    const allDetails = document.querySelectorAll(".contacts__sp-item");
+    allDetails.forEach((detail) => {
+      if (detail !== activeDetail) {
+        detail.removeAttribute("data-map-active");
+      }
+    });
+  }
+  activateInitialMarker() {
+    const activeElement = document.querySelector("[data-map-active]");
+    if (activeElement) {
+      this.handleDetailOpen(activeElement);
+    }
+  }
+};
+function initMap() {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      new CustomMap$1();
+    });
+  } else {
+    new CustomMap$1();
+  }
+}
+if (typeof google !== "undefined" && typeof google.maps !== "undefined") {
+  initMap();
+}
 document.addEventListener("click", (e) => {
   const title = e.target.closest(".filters-catalog__title");
   const content = e.target.closest(".filters-catalog__content");
@@ -5510,4 +5945,138 @@ document.addEventListener("click", (e) => {
       document.documentElement.removeAttribute("data-filter-open");
     }
   }
+});
+class CustomMap2 {
+  constructor() {
+    this.map = null;
+    this.markers = [];
+    this.activeMarker = null;
+    this.init();
+  }
+  init() {
+    this.initMap();
+    this.bindEvents();
+    this.activateInitialMarker();
+  }
+  initMap() {
+    const mapContainer = document.querySelector(".contacts__map");
+    if (!mapContainer) {
+      console.error("Контейнер карти не знайдено");
+      return;
+    }
+    const defaultCenter = { lat: 48.3794, lng: 31.1656 };
+    this.map = new google.maps.Map(mapContainer, {
+      center: defaultCenter,
+      zoom: 6,
+      styles: [],
+      mapTypeControl: false,
+      streetViewControl: false,
+      clickableIcons: false
+    });
+  }
+  createCustomMarker(coords, imageSrc, label) {
+    if (!this.map) return null;
+    const svgMarker = {
+      path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
+      fillColor: "#E2102E",
+      fillOpacity: 1,
+      strokeWeight: 0,
+      rotation: 0,
+      scale: 2,
+      anchor: new google.maps.Point(12, 24)
+    };
+    const marker = new google.maps.Marker({
+      position: coords,
+      map: this.map,
+      icon: svgMarker,
+      title: label,
+      animation: null,
+      // Без анімації
+      clickable: false
+      // Не клікабельний
+    });
+    marker.customData = { imageSrc, label };
+    return marker;
+  }
+  bindEvents() {
+    const detailsElements = document.querySelectorAll(".contacts__sp-item");
+    detailsElements.forEach((detail) => {
+      detail.addEventListener("toggle", (event) => {
+        if (detail.open) {
+          this.handleDetailOpen(detail);
+        }
+      });
+    });
+    document.addEventListener("click", (event) => {
+      if (event.target.closest(".contacts__sp-item")) {
+        this.closeOtherDetails(event.target.closest(".contacts__sp-item"));
+      }
+    });
+  }
+  handleDetailOpen(detailElement) {
+    const coordsAttr = detailElement.getAttribute("data-map-coords");
+    const imageSrc = detailElement.getAttribute("data-map-image");
+    const label = detailElement.getAttribute("data-map-label");
+    if (!coordsAttr || !imageSrc || !label) {
+      console.error("Відсутні необхідні атрибути data");
+      return;
+    }
+    const [lat, lng] = coordsAttr.split(",").map((coord) => parseFloat(coord.trim()));
+    if (isNaN(lat) || isNaN(lng)) {
+      console.error("Невірні координати:", coordsAttr);
+      return;
+    }
+    const coords = { lat, lng };
+    this.updateMapInfo(imageSrc, label);
+    this.moveToCoords(coords);
+    this.addMarkerIfNotExists(coords, imageSrc, label, detailElement);
+    detailElement.setAttribute("data-map-active", "true");
+  }
+  updateMapInfo(imageSrc, label) {
+    const imageElement = document.querySelector(".contacts__map-image");
+    const labelElement = document.querySelector(".contacts__map-info span");
+    if (imageElement && imageSrc) {
+      imageElement.style.backgroundImage = `url('${imageSrc}')`;
+      imageElement.classList.add("loaded");
+    }
+    if (labelElement && label) {
+      labelElement.textContent = label;
+    }
+  }
+  moveToCoords(coords) {
+    if (!this.map) return;
+    this.map.panTo(coords);
+    this.map.setZoom(15);
+  }
+  addMarkerIfNotExists(coords, imageSrc, label, detailElement) {
+    const markerExists = this.markers.some((marker) => {
+      const pos = marker.getPosition();
+      return pos.lat() === coords.lat && pos.lng() === coords.lng;
+    });
+    if (!markerExists) {
+      const marker = this.createCustomMarker(coords, imageSrc, label);
+      if (marker) {
+        this.markers.push(marker);
+      }
+    }
+  }
+  closeOtherDetails(activeDetail) {
+    const allDetails = document.querySelectorAll(".contacts__sp-item");
+    allDetails.forEach((detail) => {
+      if (detail !== activeDetail) {
+        detail.open = false;
+        detail.removeAttribute("data-map-active");
+      }
+    });
+  }
+  activateInitialMarker() {
+    const activeElement = document.querySelector("[data-map-active]");
+    if (activeElement) {
+      activeElement.open = true;
+      this.handleDetailOpen(activeElement);
+    }
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  new CustomMap2();
 });
