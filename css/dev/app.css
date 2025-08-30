@@ -379,9 +379,9 @@ input[type="number"] {
   text-transform: uppercase;
 }
 .bundle-products__price span {
-  font-size: 1.5rem;
   text-decoration: line-through;
   color: var(--text-color);
+  font-size: 1rem;
 }
 .item-product {
   width: 100%;
@@ -549,9 +549,12 @@ input[type="number"] {
   flex-wrap: wrap;
 }
 .item-product__price span {
-  font-size: 1.5rem;
   opacity: 0.5;
   text-decoration: line-through;
+  font-size: 1rem;
+}
+.item-product__price span span {
+  font-size: 0.75rem;
 }
 .item-product__look-row {
   display: flex;
@@ -585,6 +588,9 @@ input[type="number"] {
 }
 .news-section__title:not(:last-child) {
   margin-bottom: 3.125rem;
+}
+.news-section__item {
+  display: block;
 }
 .item-news__image {
   position: relative;
@@ -1886,7 +1892,7 @@ body::after {
   transition: text-decoration-color 0.3s;
 }
 
-.header__menu-btn, .header__menu > ul > li, .header__action-btn::before, .header__theme, .header__search button, .submenu__block ul li a, .submenu__title a, .lang a,
+.header__menu-btn, .header__menu > ul > li, .header__action-btn::before, .header__theme, .header__search button, .submenu__block ul li a, .submenu__title a, .lang button,
 .lang span, .pc-menu__close, .pc-menu__list li a, .mobile-menu__close, .basket-header__link, .basket-header__close {
   transition: all 0.3s;
   color: var(--text-color);
@@ -2097,17 +2103,29 @@ body::after {
   gap: 0.9375rem;
   align-items: center;
 }
-.lang a,
+.lang button,
 .lang span {
   font-size: 1.25rem;
   font-weight: 500;
   opacity: 0.5;
   color: var(--text-color);
 }
-.lang a.--active,
+.lang button.--active,
 .lang span.--active {
   opacity: 1;
   pointer-events: none;
+}
+
+.--dark footer .lang button,
+.--dark footer .lang span {
+  opacity: 1;
+  color: white;
+}
+
+.--dark footer .lang button.--active,
+.--dark footer .lang span.--active {
+  opacity: 1;
+  color: #e2102e;
 }
 
 .pc-menu {
@@ -5326,7 +5344,7 @@ body::after {
   .lang {
     gap: 0.625rem;
   }
-  .lang a,
+  .lang button,
   .lang span {
     font-size: 1rem;
   }
@@ -6315,12 +6333,6 @@ body::after {
   .item-product__bundle-discount span {
     font-size: 0.875rem;
   }
-  .item-product__price {
-    font-size: 1rem;
-  }
-  .item-product__price span {
-    font-size: 0.75rem;
-  }
   .item-product__look-row:not(:last-child) {
     margin-bottom: 0.625rem;
   }
@@ -6867,9 +6879,6 @@ body::after {
   .bundle-products__price {
     font-size: clamp( 1.5rem , 0.9351039839625rem  +  0.9111409763vw , 2rem );
   }
-  .bundle-products__price span {
-    font-size: clamp( 1.125rem , 0.701327987975rem  +  0.6833557322vw , 1.5rem );
-  }
   .header__menu > ul {
     column-gap: clamp( 0.9375rem , -0.96902405411875rem  +  3.075100795vw , 2.625rem );
   }
@@ -6976,9 +6985,6 @@ body::after {
   }
   .bundle-products__price {
     font-size: 2rem;
-  }
-  .bundle-products__price span {
-    font-size: 1.5rem;
   }
   .text h2 {
     font-size: 3rem;
@@ -7152,11 +7158,11 @@ body::after {
   .mobile-menu__logout:hover {
     text-decoration-color: transparent;
   }
-  .header__menu-btn:hover, .header__menu > ul > li:hover, .header__action-btn:hover::before, .header__theme:hover, .header__search button:hover, .submenu__block ul li a:hover, .submenu__title a:hover, .lang a:hover,
+  .header__menu-btn:hover, .header__menu > ul > li:hover, .header__action-btn:hover::before, .header__theme:hover, .header__search button:hover, .submenu__block ul li a:hover, .submenu__title a:hover, .lang button:hover,
   .lang span:hover, .pc-menu__close:hover, .pc-menu__list li a:hover, .mobile-menu__close:hover, .basket-header__link:hover, .basket-header__close:hover {
     color: #e2102e;
   }
-  .lang a:hover,
+  .lang button:hover,
   .lang span:hover {
     opacity: 1;
   }
