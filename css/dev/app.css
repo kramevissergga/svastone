@@ -1810,6 +1810,7 @@ body::after {
   transition: all 0.3s;
   display: block;
   color: var(--text-color);
+  width: 100%;
 }
 .spoilers__item:not(:last-child) {
   margin-bottom: 0.9375rem;
@@ -3813,6 +3814,10 @@ body::after {
   display: flex;
   flex-direction: column;
 }
+.hero-product__main .splide__track {
+  flex-grow: 1;
+  display: flex;
+}
 .hero-product__body {
   max-width: 33.75rem;
 }
@@ -3854,7 +3859,7 @@ body::after {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
 }
-.hero-product__article.--dark .hero-product__article {
+.--dark .hero-product__article {
   color: rgba(255, 255, 255, 0.3);
 }
 .hero-product__title {
