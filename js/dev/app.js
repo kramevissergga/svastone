@@ -2472,8 +2472,40 @@ class DynamicAdapt {
 if (document.querySelector("[data-fls-dynamic]")) {
   window.addEventListener("load", () => new DynamicAdapt());
 }
-document.addEventListener("click", function(e) {
-  e.target.closest("[data-theme-toggle]") ? document.documentElement.classList.toggle("--dark") : null;
+function setCookie(name, value, days = 365) {
+  const expires = /* @__PURE__ */ new Date();
+  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1e3);
+  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+}
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+function applyStoredTheme() {
+  const storedTheme = getCookie("theme");
+  if (storedTheme === "dark") {
+    document.documentElement.classList.add("--dark");
+  } else {
+    document.documentElement.classList.remove("--dark");
+  }
+}
+function initThemeToggle() {
+  document.addEventListener("click", function(e) {
+    if (e.target.closest("[data-theme-toggle]")) {
+      const isDarkMode = document.documentElement.classList.toggle("--dark");
+      setCookie("theme", isDarkMode ? "dark" : "light");
+    }
+  });
+}
+document.addEventListener("DOMContentLoaded", function() {
+  applyStoredTheme();
+  initThemeToggle();
 });
 const headerEl = document.querySelector("header.header");
 function updateHeaderHeights() {
@@ -5602,7 +5634,7 @@ function tabs() {
   }
 }
 window.addEventListener("load", tabs);
-let CustomMap$1 = class CustomMap {
+class CustomMap {
   constructor() {
     this.map = null;
     this.markers = [];
@@ -5621,7 +5653,6 @@ let CustomMap$1 = class CustomMap {
   initMap() {
     const mapContainer = document.querySelector(".contacts__map");
     if (!mapContainer) {
-      console.error("Контейнер карти не знайдено");
       return;
     }
     const defaultCenter = { lat: 48.3794, lng: 31.1656 };
@@ -5635,6 +5666,15 @@ let CustomMap$1 = class CustomMap {
       clickableIcons: false,
       disableDefaultUI: true,
       styles: [
+        {
+          featureType: "all",
+          elementType: "labels",
+          stylers: [
+            {
+              visibility: "on"
+            }
+          ]
+        },
         {
           featureType: "all",
           elementType: "labels.text.fill",
@@ -5702,95 +5742,20 @@ let CustomMap$1 = class CustomMap {
           ]
         },
         {
-          featureType: "administrative",
-          elementType: "labels",
-          stylers: [
-            {
-              visibility: "off"
-            }
-          ]
-        },
-        {
-          featureType: "administrative.country",
-          elementType: "all",
-          stylers: [
-            {
-              visibility: "simplified"
-            }
-          ]
-        },
-        {
-          featureType: "administrative.country",
-          elementType: "geometry",
-          stylers: [
-            {
-              visibility: "simplified"
-            }
-          ]
-        },
-        {
-          featureType: "administrative.country",
-          elementType: "labels.text",
-          stylers: [
-            {
-              visibility: "simplified"
-            }
-          ]
-        },
-        {
-          featureType: "administrative.province",
-          elementType: "all",
-          stylers: [
-            {
-              visibility: "off"
-            }
-          ]
-        },
-        {
           featureType: "administrative.locality",
-          elementType: "all",
+          elementType: "labels.text.fill",
           stylers: [
             {
-              visibility: "simplified"
-            },
-            {
-              saturation: "-100"
-            },
-            {
-              lightness: "30"
+              color: "#c4c4c4"
             }
           ]
         },
         {
           featureType: "administrative.neighborhood",
-          elementType: "all",
+          elementType: "labels.text.fill",
           stylers: [
             {
-              visibility: "off"
-            }
-          ]
-        },
-        {
-          featureType: "administrative.land_parcel",
-          elementType: "all",
-          stylers: [
-            {
-              visibility: "off"
-            }
-          ]
-        },
-        {
-          featureType: "landscape",
-          elementType: "all",
-          stylers: [
-            {
-              visibility: "simplified"
-            },
-            {
-              gamma: "0.00"
-            },
-            {
-              lightness: "74"
+              color: "#707070"
             }
           ]
         },
@@ -5807,24 +5772,6 @@ let CustomMap$1 = class CustomMap {
           ]
         },
         {
-          featureType: "landscape.man_made",
-          elementType: "all",
-          stylers: [
-            {
-              lightness: "3"
-            }
-          ]
-        },
-        {
-          featureType: "poi",
-          elementType: "all",
-          stylers: [
-            {
-              visibility: "off"
-            }
-          ]
-        },
-        {
           featureType: "poi",
           elementType: "geometry",
           stylers: [
@@ -5833,34 +5780,102 @@ let CustomMap$1 = class CustomMap {
             },
             {
               lightness: 21
+            },
+            {
+              visibility: "on"
             }
           ]
         },
         {
-          featureType: "road",
+          featureType: "poi.business",
           elementType: "geometry",
           stylers: [
             {
-              visibility: "simplified"
+              visibility: "on"
             }
           ]
         },
         {
           featureType: "road.highway",
-          elementType: "geometry",
-          stylers: [{ color: "#E2102E" }]
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#be2026"
+            },
+            {
+              lightness: "0"
+            },
+            {
+              visibility: "on"
+            }
+          ]
         },
         {
           featureType: "road.highway",
           elementType: "geometry.stroke",
-          stylers: [{ color: "#E2102E" }]
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              visibility: "off"
+            },
+            {
+              hue: "#ff000a"
+            }
+          ]
         },
         {
           featureType: "road.arterial",
           elementType: "geometry",
           stylers: [
             {
-              color: "#E2102E"
+              color: "#000000"
+            },
+            {
+              lightness: 18
+            }
+          ]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#575757"
+            }
+          ]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#ffffff"
+            }
+          ]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              color: "#2c2c2c"
             }
           ]
         },
@@ -5873,6 +5888,24 @@ let CustomMap$1 = class CustomMap {
             },
             {
               lightness: 16
+            }
+          ]
+        },
+        {
+          featureType: "road.local",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#999999"
+            }
+          ]
+        },
+        {
+          featureType: "road.local",
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              saturation: "-52"
             }
           ]
         },
@@ -5901,11 +5934,9 @@ let CustomMap$1 = class CustomMap {
           ]
         }
       ],
-      // Порожня тема
       mapTypeControl: false,
       streetViewControl: false,
       clickableIcons: false
-      // Вимкнути клікабельні іконки
     });
   }
   createCustomMarker(coords, imageSrc, label) {
@@ -5926,9 +5957,7 @@ let CustomMap$1 = class CustomMap {
       icon: svgMarker,
       title: label,
       animation: null,
-      // Без анімації
       clickable: false
-      // Не клікабельний
     });
     marker.customData = { imageSrc, label };
     return marker;
@@ -5953,12 +5982,10 @@ let CustomMap$1 = class CustomMap {
     const imageSrc = detailElement.getAttribute("data-map-image");
     const label = detailElement.getAttribute("data-map-label");
     if (!coordsAttr || !imageSrc || !label) {
-      console.error("Відсутні необхідні атрибути data");
       return;
     }
     const [lat, lng] = coordsAttr.split(",").map((coord) => parseFloat(coord.trim()));
     if (isNaN(lat) || isNaN(lng)) {
-      console.error("Невірні координати:", coordsAttr);
       return;
     }
     const coords = { lat, lng };
@@ -6009,14 +6036,14 @@ let CustomMap$1 = class CustomMap {
       this.handleDetailOpen(activeElement);
     }
   }
-};
+}
 function initMap() {
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
-      new CustomMap$1();
+      new CustomMap();
     });
   } else {
-    new CustomMap$1();
+    new CustomMap();
   }
 }
 if (typeof google !== "undefined" && typeof google.maps !== "undefined") {
@@ -6047,138 +6074,4 @@ document.addEventListener("click", (e) => {
       document.documentElement.removeAttribute("data-filter-open");
     }
   }
-});
-class CustomMap2 {
-  constructor() {
-    this.map = null;
-    this.markers = [];
-    this.activeMarker = null;
-    this.init();
-  }
-  init() {
-    this.initMap();
-    this.bindEvents();
-    this.activateInitialMarker();
-  }
-  initMap() {
-    const mapContainer = document.querySelector(".contacts__map");
-    if (!mapContainer) {
-      console.error("Контейнер карти не знайдено");
-      return;
-    }
-    const defaultCenter = { lat: 48.3794, lng: 31.1656 };
-    this.map = new google.maps.Map(mapContainer, {
-      center: defaultCenter,
-      zoom: 6,
-      styles: [],
-      mapTypeControl: false,
-      streetViewControl: false,
-      clickableIcons: false
-    });
-  }
-  createCustomMarker(coords, imageSrc, label) {
-    if (!this.map) return null;
-    const svgMarker = {
-      path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
-      fillColor: "#E2102E",
-      fillOpacity: 1,
-      strokeWeight: 0,
-      rotation: 0,
-      scale: 2,
-      anchor: new google.maps.Point(12, 24)
-    };
-    const marker = new google.maps.Marker({
-      position: coords,
-      map: this.map,
-      icon: svgMarker,
-      title: label,
-      animation: null,
-      // Без анімації
-      clickable: false
-      // Не клікабельний
-    });
-    marker.customData = { imageSrc, label };
-    return marker;
-  }
-  bindEvents() {
-    const detailsElements = document.querySelectorAll(".contacts__sp-item");
-    detailsElements.forEach((detail) => {
-      detail.addEventListener("toggle", (event) => {
-        if (detail.open) {
-          this.handleDetailOpen(detail);
-        }
-      });
-    });
-    document.addEventListener("click", (event) => {
-      if (event.target.closest(".contacts__sp-item")) {
-        this.closeOtherDetails(event.target.closest(".contacts__sp-item"));
-      }
-    });
-  }
-  handleDetailOpen(detailElement) {
-    const coordsAttr = detailElement.getAttribute("data-map-coords");
-    const imageSrc = detailElement.getAttribute("data-map-image");
-    const label = detailElement.getAttribute("data-map-label");
-    if (!coordsAttr || !imageSrc || !label) {
-      console.error("Відсутні необхідні атрибути data");
-      return;
-    }
-    const [lat, lng] = coordsAttr.split(",").map((coord) => parseFloat(coord.trim()));
-    if (isNaN(lat) || isNaN(lng)) {
-      console.error("Невірні координати:", coordsAttr);
-      return;
-    }
-    const coords = { lat, lng };
-    this.updateMapInfo(imageSrc, label);
-    this.moveToCoords(coords);
-    this.addMarkerIfNotExists(coords, imageSrc, label, detailElement);
-    detailElement.setAttribute("data-map-active", "true");
-  }
-  updateMapInfo(imageSrc, label) {
-    const imageElement = document.querySelector(".contacts__map-image");
-    const labelElement = document.querySelector(".contacts__map-info span");
-    if (imageElement && imageSrc) {
-      imageElement.style.backgroundImage = `url('${imageSrc}')`;
-      imageElement.classList.add("loaded");
-    }
-    if (labelElement && label) {
-      labelElement.textContent = label;
-    }
-  }
-  moveToCoords(coords) {
-    if (!this.map) return;
-    this.map.panTo(coords);
-    this.map.setZoom(15);
-  }
-  addMarkerIfNotExists(coords, imageSrc, label, detailElement) {
-    const markerExists = this.markers.some((marker) => {
-      const pos = marker.getPosition();
-      return pos.lat() === coords.lat && pos.lng() === coords.lng;
-    });
-    if (!markerExists) {
-      const marker = this.createCustomMarker(coords, imageSrc, label);
-      if (marker) {
-        this.markers.push(marker);
-      }
-    }
-  }
-  closeOtherDetails(activeDetail) {
-    const allDetails = document.querySelectorAll(".contacts__sp-item");
-    allDetails.forEach((detail) => {
-      if (detail !== activeDetail) {
-        detail.open = false;
-        detail.removeAttribute("data-map-active");
-      }
-    });
-  }
-  activateInitialMarker() {
-    const activeElement = document.querySelector("[data-map-active]");
-    if (activeElement) {
-      activeElement.open = true;
-      this.handleDetailOpen(activeElement);
-    }
-  }
-}
-document.addEventListener("DOMContentLoaded", () => {
-  new CustomMap2();
 });
