@@ -2357,12 +2357,17 @@ body::after {
 }
 .basket-header__footer {
   display: flex;
+  row-gap: 0.3125rem;
+  flex-wrap: wrap;
 }
 .basket-header__btn-link {
   font-size: 1.25rem;
+  flex-grow: 1;
 }
 .basket-header__payment {
   display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 .basket-header__payment img {
   aspect-ratio: 55/40;
