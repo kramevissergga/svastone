@@ -2592,8 +2592,11 @@ function showMore() {
     )[0];
     const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
     if (showMoreBlock.dataset.flsShowmore === "items") {
-      const showMoreTypeValue = showMoreContent.dataset.flsShowmoreContent ? parseInt(showMoreContent.dataset.flsShowmoreContent) : 3;
+      let showMoreTypeValue = showMoreContent.dataset.flsShowmoreContent ? parseInt(showMoreContent.dataset.flsShowmoreContent) : 3;
       const totalItems = showMoreContent.children.length;
+      if (showMoreTypeValue > totalItems) {
+        showMoreTypeValue = totalItems;
+      }
       const hiddenItems = totalItems - showMoreTypeValue;
       if (hiddenItems > 0) {
         showMoreButton.querySelector("span").setAttribute("data-hidden-count", hiddenItems);
@@ -2624,17 +2627,21 @@ function showMore() {
     const showMoreType = showMoreBlock.dataset.flsShowmore ? showMoreBlock.dataset.flsShowmore : "size";
     const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) ? parseFloat(getComputedStyle(showMoreContent).rowGap) : 0;
     if (showMoreType === "items") {
-      const showMoreTypeValue = showMoreContent.dataset.flsShowmoreContent ? showMoreContent.dataset.flsShowmoreContent : 3;
+      let showMoreTypeValue = showMoreContent.dataset.flsShowmoreContent ? parseInt(showMoreContent.dataset.flsShowmoreContent) : 3;
       const showMoreItems = showMoreContent.children;
-      for (let index = 1; index < showMoreItems.length; index++) {
-        const showMoreItem = showMoreItems[index - 1];
-        const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) ? parseFloat(getComputedStyle(showMoreItem).marginTop) : 0;
-        const marginBottom = parseFloat(
-          getComputedStyle(showMoreItem).marginBottom
-        ) ? parseFloat(getComputedStyle(showMoreItem).marginBottom) : 0;
+      const totalItems = showMoreItems.length;
+      if (showMoreTypeValue > totalItems) {
+        showMoreTypeValue = totalItems;
+      }
+      for (let i = 0; i < showMoreTypeValue; i++) {
+        const showMoreItem = showMoreItems[i];
+        if (!showMoreItem) break;
+        const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) || 0;
+        const marginBottom = parseFloat(getComputedStyle(showMoreItem).marginBottom) || 0;
         hiddenHeight += showMoreItem.offsetHeight + marginTop;
-        if (index == showMoreTypeValue) break;
-        hiddenHeight += marginBottom;
+        if (i < showMoreTypeValue - 1) {
+          hiddenHeight += marginBottom;
+        }
       }
       rowGap ? hiddenHeight += (showMoreTypeValue - 1) * rowGap : null;
     } else {
